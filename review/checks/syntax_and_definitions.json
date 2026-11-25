@@ -1,0 +1,642 @@
+[
+  {
+    "file": "scripts/add_abstracts.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "add_abstracts",
+        "line": 5,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/app.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "AskRequest",
+        "line": 12,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "AskResponse",
+        "line": 15,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "lifespan",
+        "line": 20,
+        "kind": "AsyncFunctionDef"
+      },
+      {
+        "name": "health",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "ask_endpoint",
+        "line": 34,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/backup_relations.py",
+    "syntax": "ok",
+    "definitions": []
+  },
+  {
+    "file": "scripts/check_laya.py",
+    "syntax": "ok",
+    "definitions": []
+  },
+  {
+    "file": "scripts/embeddings.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "create_index",
+        "line": 9,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "embed_entities",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "embed_papers",
+        "line": 37,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/entity_names.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "canonicalize_entity",
+        "line": 5,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/eval.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "ask_baseline",
+        "line": 20,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "sample_triplets",
+        "line": 31,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/eval_graph.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "arxiv_ids",
+        "line": 88,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "citation_diagnostics",
+        "line": 92,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "summarize",
+        "line": 108,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "save_report",
+        "line": 142,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "prepare_cases",
+        "line": 151,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "run_answers",
+        "line": 171,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 206,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/eval_laya.py",
+    "syntax": "ok",
+    "definitions": []
+  },
+  {
+    "file": "scripts/extract_triplets.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "validate_triplets",
+        "line": 23,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "extract_triplets",
+        "line": 37,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/extraction.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "load_done_ids",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 18,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/fetch_papers.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "fetch_papers",
+        "line": 5,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/laya_filter.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "build_questions",
+        "line": 9,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_abstracts",
+        "line": 17,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "filter_relations",
+        "line": 22,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/load_graph.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "_add_paper",
+        "line": 8,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_add_entity",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_add_relation",
+        "line": 16,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "_mention",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create_constraints",
+        "line": 38,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "load_triplets",
+        "line": 53,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/merge_actgcg.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "snapshot",
+        "line": 19,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "merge_edge_properties",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "edge_key",
+        "line": 66,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_plan",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "apply_plan",
+        "line": 149,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "main",
+        "line": 230,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/prepare_laya_eval.py",
+    "syntax": "ok",
+    "definitions": []
+  },
+  {
+    "file": "scripts/qa.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "vector_search_entities",
+        "line": 21,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "graph_context",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "create_paper_index",
+        "line": 51,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "prepare_context",
+        "line": 63,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "build_prompt",
+        "line": 73,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "generate_answer",
+        "line": 102,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "ask",
+        "line": 132,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/rebuild_relations.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "rebuild",
+        "line": 6,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "scripts/retrieval.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "extract_title_terms",
+        "line": 14,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "title_pattern",
+        "line": 30,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "rank_candidates",
+        "line": 36,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "retrieve_papers",
+        "line": 50,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "src/__init__.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 1,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "src/graphrag_papers/__init__.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 4,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "tests/test_eval_graph.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "EvalGraphTests",
+        "line": 24,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "test_prompts_only_differ_by_graph_facts",
+        "line": 25,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_prepare_cases_retrieves_once_per_question",
+        "line": 32,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_citations_are_not_treated_as_entailment",
+        "line": 42,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_unknown_citation_detected",
+        "line": 50,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_versionless_citation_allowed_but_other_version_not_assumed",
+        "line": 57,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_citation_domain_is_not_a_substring_match",
+        "line": 65,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_empty_summary_does_not_invent_quality_or_metrics",
+        "line": 71,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_generation_keeps_usage_and_flags_truncation",
+        "line": 77,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_api_ask_still_returns_string",
+        "line": 90,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_retrieval_only_ask_excludes_graph_facts",
+        "line": 97,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_runner_alternates_order_and_never_sends_reference_answers",
+        "line": 105,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_generation_error_is_not_counted_as_an_abstention_or_success",
+        "line": 144,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_resume_does_not_regenerate_saved_answers",
+        "line": 165,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "generated",
+        "line": 119,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "tests/test_merge_actgcg.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "sample_snapshot",
+        "line": 13,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "MergeActGCGTests",
+        "line": 59,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "test_direction_sources_embedding_and_input_preserved",
+        "line": 60,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_duplicate_edges_union_sources",
+        "line": 75,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_duplicate_mentions_collapse",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_reverse_relationship_is_not_collapsed",
+        "line": 93,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_self_relationship_is_not_silently_discarded",
+        "line": 100,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_unknown_relationship_aborts",
+        "line": 108,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_conflicting_metadata_aborts",
+        "line": 114,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_invalid_sources_abort",
+        "line": 118,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_conflicting_node_metadata_aborts",
+        "line": 122,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_already_merged_is_noop",
+        "line": 129,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_missing_canonical_aborts",
+        "line": 135,
+        "kind": "FunctionDef"
+      }
+    ]
+  },
+  {
+    "file": "tests/test_retrieval.py",
+    "syntax": "ok",
+    "definitions": [
+      {
+        "name": "FakeResult",
+        "line": 18,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "FakeSession",
+        "line": 26,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "RetrievalTests",
+        "line": 36,
+        "kind": "ClassDef"
+      },
+      {
+        "name": "__init__",
+        "line": 19,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "data",
+        "line": 22,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "__init__",
+        "line": 27,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "run",
+        "line": 31,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_extract_method_names",
+        "line": 37,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_case_insensitive_hyphenated_name",
+        "line": 48,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_general_questions_keep_semantic_search",
+        "line": 51,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_patterns_match_boundaries_and_separator_variants",
+        "line": 57,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_patterns_do_not_inject_regex_syntax",
+        "line": 64,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_title_hit_can_recover_paper_outside_vector_top_k",
+        "line": 67,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_deduplicate_by_paper_id",
+        "line": 74,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_semantic_score_breaks_title_match_ties",
+        "line": 79,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_no_named_method_uses_only_vector_query",
+        "line": 86,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_missing_exact_name_falls_back_to_vectors",
+        "line": 95,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_name_query_is_parameterized",
+        "line": 101,
+        "kind": "FunctionDef"
+      },
+      {
+        "name": "test_invalid_k",
+        "line": 108,
+        "kind": "FunctionDef"
+      }
+    ]
+  }
+]

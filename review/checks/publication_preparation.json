@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-25T18:37:28.359480+00:00",
+  "scope": "Publication preparation after user-selected hybrid: author-edited scripts and working src.",
+  "password_environment_changes": [
+    "scripts/app.py",
+    "scripts/embeddings.py",
+    "scripts/eval.py",
+    "scripts/load_graph.py",
+    "scripts/qa.py"
+  ],
+  "application_ast_unchanged_except_password_and_os_import": true,
+  "environment_auth_checks": {
+    "configured_and_missing_password": true,
+    "settings_files": 5
+  },
+  "local_env_excluded": true,
+  "database_password_rotated": false,
+  "live_database_or_generation_run": false,
+  "limitations": [
+    "Historical audit findings describe the earlier source snapshot.",
+    "Database password rotation must be performed separately."
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "created_at": "2026-11-25T18:37:42.845143+00:00",
+  "description": "User-selected hybrid: author-edited scripts, working src and tests. Publication preparation only replaces hardcoded Neo4j passwords with NEO4J_PASSWORD and adds os imports. README, .gitignore, .env.example and the verifier are updated. Historical audit/evaluation evidence describes earlier snapshots, not a fresh live run.",
+  "baseline_for": "verify_package.py source integrity check",
+  "files": {
+    ".env.example": {
+      "sha256": "352cc8c62e4922dc7497f479069c6e10ca64391edf15892c27e13c8e5a26a899",
+      "bytes": 54,
+      "lines": 1
+    },
+    ".gitignore": {
+      "sha256": "bb7a4bd2b8210f92f2063f42a245496e4119bb9b32f6617bbaa46357daa7d643",
+      "bytes": 427,
+      "lines": 33
+    },
+    ".python-version": {
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "bytes": 5,
+      "lines": 1
+    },
+    "README.md": {
+      "sha256": "7b4636c27ed847a2cfd25efcbd99167e4f73da7deedc0a8000a0ab15f3109858",
+      "bytes": 6668,
+      "lines": 82
+    },
+    "pyproject.toml": {
+      "sha256": "16b6a120a64f1ada0b1c48c4e673aa8f714070e96b8daedb15ca5915969e5760",
+      "bytes": 517,
+      "lines": 23
+    },
+    "review/tools/collect_checks.py": {
+      "sha256": "b49badafe901346afb63375f2bb5dd700f1519f449160cc091ba39b2ccaef706",
+      "bytes": 11732,
+      "lines": 360
+    },
+    "review/tools/collect_extra_evidence.py": {
+      "sha256": "ed72a628222a9dcddd96be212bf379144a19a4b1fa72da0b377aaa6695c33f4d",
+      "bytes": 2994,
+      "lines": 88
+    },
+    "review/tools/export_anki.py": {
+      "sha256": "4462a5cc3d61073cea6c905ddc35c5a0f6e89849e931e1aed5afcdfcc5d31057",
+      "bytes": 4486,
+      "lines": 124
+    },
+    "review/tools/verify_package.py": {
+      "sha256": "6b61c5d6253336053d3ef08b905567f410ecf9219fc8a0af9d76921361af5635",
+      "bytes": 15954,
+      "lines": 389
+    },
+    "scripts/add_abstracts.py": {
+      "sha256": "d8420f130f0eb3c97f9f9c23d88885b4a46c79af1486d2a6062ca2980490c1ab",
+      "bytes": 715,
+      "lines": 25
+    },
+    "scripts/app.py": {
+      "sha256": "d9613976011f0053974d21d87c51709d1acdae5f7a867ac2892e5ca44f7efe37",
+      "bytes": 1037,
+      "lines": 37
+    },
+    "scripts/backup_relations.py": {
+      "sha256": "0652030805886cb9becdfd4697274104d848d8e7f25e9e90eefd7a0235c21021",
+      "bytes": 934,
+      "lines": 23
+    },
+    "scripts/check_laya.py": {
+      "sha256": "3ca09d4d1d020f9e3fcb59b9c72f3f911081aedff31663b84535944d097d5e30",
+      "bytes": 1620,
+      "lines": 49
+    },
+    "scripts/embeddings.py": {
+      "sha256": "055729d9012f52b24f6667a1fe0a4455fcb589a37ded3bf26b975850b5a49431",
+      "bytes": 2256,
+      "lines": 67
+    },
+    "scripts/entity_names.py": {
+      "sha256": "2f7348ce453bf17ccdf3a557c483348c41a525f205ff193cf92af93531e96fc3",
+      "bytes": 116,
+      "lines": 6
+    },
+    "scripts/eval.py": {
+      "sha256": "907d99e0fc0832a302e0411277490b1649abcf0e1d87545f1e2ecedad50b8137",
+      "bytes": 2058,
+      "lines": 65
+    },
+    "scripts/eval_graph.py": {
+      "sha256": "2b7694c391e827deb2cf46eeb5f7d9b9e08518d972fa3f23c1f71b7e618df2ab",
+      "bytes": 10663,
+      "lines": 238
+    },
+    "scripts/eval_laya.py": {
+      "sha256": "d3bb557979d68db1162431205025ac73d0dbc3f06bc858c7be46dc0e860d68de",
+      "bytes": 2937,
+      "lines": 84
+    },
+    "scripts/extract_triplets.py": {
+      "sha256": "3fbbb02d8a3a3d1325b3de27f28340a8d60ddec58edfdb63dfd077f039bd7d27",
+      "bytes": 2653,
+      "lines": 72
+    },
+    "scripts/extraction.py": {
+      "sha256": "a2468f68381153fccf9690722e1af669d3071d3e0056ee1d56807b2b07777d2e",
+      "bytes": 1096,
+      "lines": 38
+    },
+    "scripts/fetch_papers.py": {
+      "sha256": "4ba0a313bc55a130f8aeb4eed72c582fd8c5b4f0e83a51c09f15d74a855a1c89",
+      "bytes": 1147,
+      "lines": 33
+    },
+    "scripts/laya_filter.py": {
+      "sha256": "fb9a359ce47eba0fdcb80d7d3eb6c40379c472e15705996377a6a96f4d448c79",
+      "bytes": 2116,
+      "lines": 61
+    },
+    "scripts/load_graph.py": {
+      "sha256": "d1737f1fde3cdd2333e82bd6b2ad03bfa348417aee1da7e9d8f7a6c096e28a3c",
+      "bytes": 2861,
+      "lines": 87
+    },
+    "scripts/merge_actgcg.py": {
+      "sha256": "bee228cd7b2af2c399a394707d70b52ae65216db5f047d4e58f326a9d8add5a3",
+      "bytes": 9262,
+      "lines": 242
+    },
+    "scripts/prepare_laya_eval.py": {
+      "sha256": "c7e7dcf35f3518c5c58bbd814e7560536bcf2aa81750b1d9c5c7261254dc3a46",
+      "bytes": 1283,
+      "lines": 36
+    },
+    "scripts/qa.py": {
+      "sha256": "5b770dfe6b66fc4d6c90a6e1b2e757ae0873df8ee8a3092df84c382275a0c2b8",
+      "bytes": 4870,
+      "lines": 149
+    },
+    "scripts/rebuild_relations.py": {
+      "sha256": "c6700605b7bf79c68c972c3fec1e9b214fd5a252e8819c3dd62ef149b4dbe6c5",
+      "bytes": 1833,
+      "lines": 54
+    },
+    "scripts/retrieval.py": {
+      "sha256": "f2f06db883a86eab96419d73285200c64f93d0ae70a54170556bb3e009d11288",
+      "bytes": 2606,
+      "lines": 93
+    },
+    "src/__init__.py": {
+      "sha256": "d39ffbc54fddb3f33a5801ae1fb07982ead1fe7de0e3d77a96c42046bce9c66c",
+      "bytes": 61,
+      "lines": 2
+    },
+    "src/graphrag_papers/__init__.py": {
+      "sha256": "13341a527ddedf30d745ab63b955c425f507b702400f9ae43630acdf3230758c",
+      "bytes": 100,
+      "lines": 5
+    },
+    "tests/test_eval_graph.py": {
+      "sha256": "cc40d7c84f2ebb45d4cc3c5271553667972e2faaf867501c0227bbe9ab3239d0",
+      "bytes": 7970,
+      "lines": 208
+    },
+    "tests/test_merge_actgcg.py": {
+      "sha256": "6329322e597d94f40330902d42974b26c7db0fab7f8dfd3619649895b4cfb96b",
+      "bytes": 5120,
+      "lines": 143
+    },
+    "tests/test_retrieval.py": {
+      "sha256": "5568609ea4f6a0a445443e5ecb270689c9c651f023b2e073d94e3dabd9c3b206",
+      "bytes": 4156,
+      "lines": 116
+    },
+    "uv.lock": {
+      "sha256": "9982bc1f6bf5bd9fc176ad64ade3454ae4a162409665536fb5ad9f8f57d14032",
+      "bytes": 387044,
+      "lines": 1954
+    }
+  },
+  "unchanged_since_processing": [
+    ".python-version",
+    "pyproject.toml",
+    "review/tools/collect_checks.py",
+    "review/tools/collect_extra_evidence.py",
+    "review/tools/export_anki.py",
+    "src/__init__.py",
+    "src/graphrag_papers/__init__.py",
+    "tests/test_eval_graph.py",
+    "tests/test_merge_actgcg.py",
+    "tests/test_retrieval.py",
+    "uv.lock"
+  ],
+  "hand_edited_after_processing": [
+    "review/tools/verify_package.py",
+    "scripts/add_abstracts.py",
+    "scripts/app.py",
+    "scripts/backup_relations.py",
+    "scripts/check_laya.py",
+    "scripts/embeddings.py",
+    "scripts/entity_names.py",
+    "scripts/eval_graph.py",
+    "scripts/eval_laya.py",
+    "scripts/extract_triplets.py",
+    "scripts/extraction.py",
+    "scripts/fetch_papers.py",
+    "scripts/laya_filter.py",
+    "scripts/load_graph.py",
+    "scripts/merge_actgcg.py",
+    "scripts/prepare_laya_eval.py",
+    "scripts/qa.py",
+    "scripts/rebuild_relations.py",
+    "scripts/retrieval.py"
+  ],
+  "unit_tests": 36,
+  "unit_tests_exit_code": 0,
+  "syntax_ok_python_files": 28,
+  "publication_changes": [
+    ".gitignore",
+    ".env.example",
+    "README.md",
+    "review/tools/verify_package.py",
+    "scripts/app.py",
+    "scripts/qa.py",
+    "scripts/load_graph.py",
+    "scripts/embeddings.py",
+    "scripts/eval.py"
+  ],
+  "publication_evidence": "review/checks/publication_preparation.json"
+}

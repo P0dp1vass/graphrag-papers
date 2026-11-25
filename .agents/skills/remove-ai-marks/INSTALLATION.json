@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/guillaumemeyer/watermarks-remover",
+  "revision": "5a62be6338d2812372b1da440e55c82922f97d53",
+  "license": "MIT",
+  "scope": "project-local",
+  "local_adaptation": "metadata.opencode/autoinvoke=false; explicit invocation only",
+  "requested_use": "Initial read-only audit; later explicit user request processed every project Python file using the skill's code route. No hooks or persistent autostart.",
+  "processing_evidence": "review/checks/code_cleanup/skill_application.json",
+  "limitations": "This tool is not a code reviewer, a proof of human authorship, or a verifier of proprietary statistical watermarks."
+}

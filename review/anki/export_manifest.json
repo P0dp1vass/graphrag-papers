@@ -1,0 +1,15 @@
+{
+  "cards": 154,
+  "core_cards": 83,
+  "source_sha256": "e6f741c5b8659618e37f478dc267522b77509f4c450d53c60254a39db3d3c00b",
+  "outputs": {
+    "graphrag_review_ru.tsv": {
+      "bytes": 55689,
+      "sha256": "d672271ebe02194e168d14ab9fe6b387ba0c968b3643c6905dcc7633f80d03aa"
+    },
+    "graphrag_review_ru.apkg": {
+      "bytes": 127194,
+      "sha256": "25d1c680ec2c440290c4d4a2771353b698c156fa7e8113192e03e9b81035ad4a"
+    }
+  }
+}

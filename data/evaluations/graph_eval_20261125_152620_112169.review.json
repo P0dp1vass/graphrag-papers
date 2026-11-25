@@ -1,0 +1,113 @@
+{
+  "raw_report": "graph_eval_20261125_152620_112169.json",
+  "reviewer": "AI assistant that also helped develop the system; not an independent or blinded expert",
+  "review_scope": "Compare generated claims with the frozen retrieved abstracts and AI-assisted reference notes. Do not validate the papers' experimental results independently.",
+  "paired_prompts_verified": "Each saved prompt pair differs only by the graph facts. Abstracts, question, instructions, model and generation options are shared.",
+  "summary": {
+    "questions": 5,
+    "answerable_questions_with_expected_paper_in_top_3": 4,
+    "answerable_questions": 4,
+    "generation_errors": 0,
+    "truncated_answers": 0,
+    "comparison": {
+      "retrieval_only_wins": 0,
+      "graph_enriched_wins": 0,
+      "ties_on_core_answer_quality": 5
+    },
+    "mean_generation_wall_seconds": {
+      "retrieval_only": 28.584622393199243,
+      "graph_enriched": 47.36567403299923
+    },
+    "answerable_responses_with_retrieved_source_url": {
+      "retrieval_only": "1/4",
+      "graph_enriched": "1/4"
+    },
+    "conclusion": "No clear answer-quality benefit from adding graph facts on these five development questions. Graph-enriched generation took longer in this run. Both modes share a numerical interpretation error on the Bioformer case and usually omit source URLs."
+  },
+  "cases": [
+    {
+      "id": "rag_fgo",
+      "comparison": "tie",
+      "retrieval_only": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "graph_enriched": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "notes": "Both explain query-rewriting optimization and accumulation of high-quality strategies to mitigate noisy feedback. The graph arm gives a more formal optimization description, but no essential additional answer fact. Neither answer includes a source URL."
+    },
+    {
+      "id": "bioformer",
+      "comparison": "tie",
+      "retrieval_only": {
+        "correctness": 1,
+        "groundedness": 1,
+        "citation_support": 1
+      },
+      "graph_enriched": {
+        "correctness": 1,
+        "groundedness": 1,
+        "citation_support": 1
+      },
+      "source_evidence": "despite having about 40% of their parameters and producing 512-dimensional rather than 768-dimensional vectors",
+      "notes": "Both correctly state MAP +37.0% and Recall@100 +29.1%, and cite the correct paper. Both incorrectly turn 'about 40% of their parameters' into 'about 40% fewer parameters'. The source implies approximately 60% fewer parameters. The graph arm's extra claim about shorter vectors is supported."
+    },
+    {
+      "id": "textsphere",
+      "comparison": "tie",
+      "retrieval_only": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "graph_enriched": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "notes": "Both identify pretrained CLIP text embeddings incorporated through AdaLN. The retrieval-only answer additionally mentions retained spherical sampling. Both answer the conditioning question correctly; neither provides a URL."
+    },
+    {
+      "id": "actgcg",
+      "comparison": "tie",
+      "retrieval_only": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "graph_enriched": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": 0
+      },
+      "notes": "Answers are identical and explain optimizing a suffix to match steering-induced target activations instead of modifying hidden states at each generation step. They do not claim optimization itself requires no white-box access. Neither cites a URL. They omit concept-dependent effectiveness limits, so these short answers should not be taken as evidence of universal steering equivalence."
+    },
+    {
+      "id": "out_of_scope",
+      "comparison": "tie",
+      "retrieval_only": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": null
+      },
+      "graph_enriched": {
+        "correctness": 2,
+        "groundedness": 2,
+        "citation_support": null
+      },
+      "notes": "Both abstain rather than invent a current retail price. The retrieved abstracts do not provide that price. A source URL is not required for this pure abstention."
+    }
+  ],
+  "limitations": [
+    "Only five English development cases; several were already used for debugging.",
+    "Each answerable question is primarily supported by one abstract, not a multi-hop graph task.",
+    "The shared retriever uses title identifiers plus vector search; retrieval_only means no graph facts, not removal of title-aware retrieval.",
+    "Scores are an AI-assisted qualitative review, not independent human annotations or a calibrated automatic judge.",
+    "Latency is one local run and includes caching/loading effects; it is not a statistically validated performance benchmark.",
+    "Temperature zero and a fixed seed do not guarantee identical results across runs."
+  ]
+}

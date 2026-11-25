@@ -1,0 +1,8 @@
+{
+  "model": "all-MiniLM-L6-v2",
+  "max_seq_length": 256,
+  "papers_checked": 500,
+  "texts_over_model_limit": 388,
+  "longest_text_tokens": 547,
+  "note": "Tokenizer check, not inference. Full abstracts remain in QA context; this limit concerns the embedding inputs."
+}

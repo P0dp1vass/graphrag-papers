@@ -1,0 +1,1015 @@
+{
+  "nodes": [
+    {
+      "labels": [
+        "Paper"
+      ],
+      "count": 498
+    },
+    {
+      "labels": [
+        "Entity"
+      ],
+      "count": 2690
+    }
+  ],
+  "edges": [
+    {
+      "type": "R",
+      "count": 3004
+    },
+    {
+      "type": "MENTIONS",
+      "count": 3121
+    }
+  ],
+  "papers": [
+    {
+      "count": 498,
+      "with_abstract": 498,
+      "with_embedding": 498
+    }
+  ],
+  "entities": [
+    {
+      "count": 2690,
+      "with_embedding": 2690
+    }
+  ],
+  "sources": [
+    {
+      "count": 3004,
+      "with_nonempty_sources": 3004
+    }
+  ],
+  "self_edges": [
+    {
+      "count": 16
+    }
+  ],
+  "isolated_papers": [
+    {
+      "count": 13
+    }
+  ],
+  "name_variant_groups": [
+    {
+      "key": "large language models",
+      "names": [
+        "Large_language_models",
+        "Large language models",
+        "large language models",
+        "LARGE_LANGUAGE_MODELS"
+      ],
+      "variants": 4
+    },
+    {
+      "key": "agent",
+      "names": [
+        "Agent",
+        "AGENT",
+        "agent"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "benchmarks",
+      "names": [
+        "benchmarks",
+        "BENCHMARKS",
+        "Benchmarks"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "decoder",
+      "names": [
+        "DECODER",
+        "Decoder",
+        "decoder"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "language model",
+      "names": [
+        "language model",
+        "LANGUAGE_MODEL",
+        "Language model"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "language models",
+      "names": [
+        "Language models",
+        "LANGUAGE_MODELS",
+        "language models"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "steering",
+      "names": [
+        "STEERING",
+        "Steering",
+        "steering"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "task",
+      "names": [
+        "task",
+        "TASK",
+        "Task"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "transformer",
+      "names": [
+        "Transformer",
+        "TRANSFORMER",
+        "transformer"
+      ],
+      "variants": 3
+    },
+    {
+      "key": "accuracy",
+      "names": [
+        "accuracy",
+        "ACCURACY"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "activation steering",
+      "names": [
+        "activation steering",
+        "ACTIVATION_STEERING"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "agent harness",
+      "names": [
+        "agent harness",
+        "AGENT_HARNESS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "agents",
+      "names": [
+        "agents",
+        "AGENTS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "ai agents",
+      "names": [
+        "AI_AGENTS",
+        "AI agents"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "alfworld",
+      "names": [
+        "ALFWorld",
+        "ALFWORLD"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "algorithm",
+      "names": [
+        "algorithm",
+        "ALGORITHM"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "anchor",
+      "names": [
+        "ANCHOR",
+        "anchor"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "architecture",
+      "names": [
+        "architecture",
+        "ARCHITECTURE"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "astra",
+      "names": [
+        "ASTRA",
+        "Astra"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "author",
+      "names": [
+        "author",
+        "AUTHOR"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "base model",
+      "names": [
+        "BASE_MODEL",
+        "base model"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "baseline",
+      "names": [
+        "Baseline",
+        "BASELINE"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "baselines",
+      "names": [
+        "BASELINES",
+        "baselines"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "benchmark",
+      "names": [
+        "benchmark",
+        "BENCHMARK"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "checkpoint",
+      "names": [
+        "checkpoint",
+        "CHECKPOINT"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "checkpoints",
+      "names": [
+        "CHECKPOINTS",
+        "checkpoints"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "classifier",
+      "names": [
+        "CLASSIFIER",
+        "classifier"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "claude sonnet",
+      "names": [
+        "CLAUDE_SONNET",
+        "Claude Sonnet"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "commitment",
+      "names": [
+        "COMMITMENT",
+        "commitment"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "compression",
+      "names": [
+        "compression",
+        "Compression"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "contract",
+      "names": [
+        "CONTRACT",
+        "contract"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "corpus",
+      "names": [
+        "CORPUS",
+        "corpus"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "dataset",
+      "names": [
+        "DATASET",
+        "dataset"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "decision model",
+      "names": [
+        "DECISION_MODEL",
+        "decision model"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "decision models",
+      "names": [
+        "decision models",
+        "DECISION_MODELS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "developers",
+      "names": [
+        "developers",
+        "DEVELOPERS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "diagnosis",
+      "names": [
+        "DIAGNOSIS",
+        "diagnosis"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "energy",
+      "names": [
+        "energy",
+        "ENERGY"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "english",
+      "names": [
+        "English",
+        "ENGLISH"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "frozen language model",
+      "names": [
+        "FROZEN_LANGUAGE_MODEL",
+        "frozen language model"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "gemini",
+      "names": [
+        "Gemini",
+        "GEMINI"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "gemma",
+      "names": [
+        "GEMMA",
+        "Gemma"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "gemma-4-31b",
+      "names": [
+        "Gemma-4-31B",
+        "GEMMA-4-31B"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "generative ai",
+      "names": [
+        "GENERATIVE_AI",
+        "generative AI"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "greedy coordinate gradient",
+      "names": [
+        "Greedy Coordinate Gradient",
+        "GREEDY_COORDINATE_GRADIENT"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "haiku",
+      "names": [
+        "HAIKU",
+        "Haiku"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "harmbench",
+      "names": [
+        "HarmBench",
+        "HARMBENCH"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "harness",
+      "names": [
+        "harness",
+        "HARNESS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "heads",
+      "names": [
+        "HEADS",
+        "heads"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "human",
+      "names": [
+        "human",
+        "HUMAN"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "human reviewers",
+      "names": [
+        "human reviewers",
+        "HUMAN_REVIEWERS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "hypotheses",
+      "names": [
+        "HYPOTHESES",
+        "hypotheses"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "jev",
+      "names": [
+        "Jev",
+        "JEV"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "judge",
+      "names": [
+        "judge",
+        "JUDGE"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "large language model",
+      "names": [
+        "large language model",
+        "LARGE_LANGUAGE_MODEL"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "leaderboard",
+      "names": [
+        "leaderboard",
+        "LEADERBOARD"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "lexicon",
+      "names": [
+        "LEXICON",
+        "lexicon"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "llama",
+      "names": [
+        "Llama",
+        "LLAMA"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "llm agents",
+      "names": [
+        "LLM AGENTS",
+        "LLM agents"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "llm judges",
+      "names": [
+        "LLM judges",
+        "LLM_JUDGES"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "llm-as-a-judge",
+      "names": [
+        "LLM-as-a-judge",
+        "LLM-as-a-Judge"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "looped transformers",
+      "names": [
+        "Looped Transformers",
+        "LOOPED_TRANSFORMERS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "lora adapters",
+      "names": [
+        "LORA_ADAPTERS",
+        "LoRA adapters"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "market",
+      "names": [
+        "market",
+        "MARKET"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "math",
+      "names": [
+        "MATH",
+        "math"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "model",
+      "names": [
+        "model",
+        "MODEL"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "models",
+      "names": [
+        "models",
+        "MODELS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "moe",
+      "names": [
+        "MoE",
+        "MOE"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "neural networks",
+      "names": [
+        "neural networks",
+        "NEURAL_NETWORKS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "open-weight language models",
+      "names": [
+        "open-weight language models",
+        "Open-weight language models"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "open-weight models",
+      "names": [
+        "open-weight_models",
+        "open-weight models"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "oracle",
+      "names": [
+        "ORACLE",
+        "oracle"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "policy",
+      "names": [
+        "POLICY",
+        "policy"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "position",
+      "names": [
+        "POSITION",
+        "position"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "posttrainbench",
+      "names": [
+        "POSTTRAINBENCH",
+        "PostTrainBench"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "prompt",
+      "names": [
+        "PROMPT",
+        "prompt"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "python",
+      "names": [
+        "Python",
+        "PYTHON"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "qwen",
+      "names": [
+        "Qwen",
+        "QWEN"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "qwen3.5-4b",
+      "names": [
+        "Qwen3.5-4B",
+        "QWEN3.5-4B"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "qwen3.8-27b",
+      "names": [
+        "Qwen3.8-27B",
+        "QWEN3.8-27B"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "reasoning model",
+      "names": [
+        "reasoning model",
+        "REASONING_MODEL"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "record",
+      "names": [
+        "record",
+        "RECORD"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "report",
+      "names": [
+        "report",
+        "REPORT"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "repository",
+      "names": [
+        "REPOSITORY",
+        "repository"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "residual stream",
+      "names": [
+        "residual stream",
+        "RESIDUAL_STREAM"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "rules",
+      "names": [
+        "rules",
+        "RULES"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "sampler",
+      "names": [
+        "SAMPLER",
+        "sampler"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "semantics",
+      "names": [
+        "semantics",
+        "SEMANTICS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "skill",
+      "names": [
+        "Skill",
+        "SKILL"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "stability",
+      "names": [
+        "stability",
+        "STABILITY"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "state",
+      "names": [
+        "STATE",
+        "State"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "steering vector",
+      "names": [
+        "steering vector",
+        "STEERING_VECTOR"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "step",
+      "names": [
+        "step",
+        "STEP"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "swe-bench",
+      "names": [
+        "SWE-Bench",
+        "SWE-bench"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "system",
+      "names": [
+        "system",
+        "SYSTEM"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "table",
+      "names": [
+        "Table",
+        "table"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "tasks",
+      "names": [
+        "tasks",
+        "TASKS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "text classifiers",
+      "names": [
+        "text classifiers",
+        "TEXT_CLASSIFIERS"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "token",
+      "names": [
+        "token",
+        "TOKEN"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "tokens",
+      "names": [
+        "TOKENS",
+        "tokens"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "training data",
+      "names": [
+        "training data",
+        "TRAINING_DATA"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "trajectories",
+      "names": [
+        "trajectories",
+        "TRAJECTORIES"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "transformers",
+      "names": [
+        "TRANSFORMERS",
+        "Transformers"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "universal suffixes",
+      "names": [
+        "universal suffixes",
+        "UNIVERSAL_SUFFIXES"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "user",
+      "names": [
+        "user",
+        "USER"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "users",
+      "names": [
+        "USERS",
+        "users"
+      ],
+      "variants": 2
+    },
+    {
+      "key": "webshop",
+      "names": [
+        "WebShop",
+        "WEBSHOP"
+      ],
+      "variants": 2
+    }
+  ],
+  "constraints": [
+    {
+      "name": "entity_name_unique",
+      "type": "UNIQUENESS",
+      "labelsOrTypes": [
+        "Entity"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "paper_id_unique",
+      "type": "UNIQUENESS",
+      "labelsOrTypes": [
+        "Paper"
+      ],
+      "properties": [
+        "id"
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "entity_name_unique",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "labelsOrTypes": [
+        "Entity"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "entity_vec",
+      "type": "VECTOR",
+      "state": "ONLINE",
+      "labelsOrTypes": [
+        "Entity"
+      ],
+      "properties": [
+        "embedding"
+      ]
+    },
+    {
+      "name": "index_343aff4e",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "labelsOrTypes": null,
+      "properties": null
+    },
+    {
+      "name": "index_f7700477",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "labelsOrTypes": null,
+      "properties": null
+    },
+    {
+      "name": "paper_id_unique",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "labelsOrTypes": [
+        "Paper"
+      ],
+      "properties": [
+        "id"
+      ]
+    },
+    {
+      "name": "paper_vec",
+      "type": "VECTOR",
+      "state": "ONLINE",
+      "labelsOrTypes": [
+        "Paper"
+      ],
+      "properties": [
+        "embedding"
+      ]
+    }
+  ],
+  "canonical_actgcg": [
+    {
+      "name": "ActGCG",
+      "aliases": [
+        "ACTGCG"
+      ],
+      "dimensions": 384,
+      "incident_facts": 7
+    }
+  ]
+}

@@ -1,0 +1,2168 @@
+{
+  "health": {
+    "ok": true,
+    "version": "5a62be6338d2812372b1da440e55c82922f97d53"
+  },
+  "capabilities": {
+    "ok": true,
+    "version": "5a62be6338d2812372b1da440e55c82922f97d53",
+    "tools": {
+      "c2patool": false,
+      "exiftool": false,
+      "qpdf": false,
+      "ghostscript": true,
+      "ffmpeg": true
+    },
+    "pixel_backends": {
+      "ctrlregen": false,
+      "diffusion": false
+    },
+    "scorers": {
+      "synthid": false,
+      "synthid_http": false,
+      "stylometry": true
+    },
+    "text_detectors": {
+      "markllm": false,
+      "gumbel": false,
+      "claude-text": false
+    },
+    "text_generators": {
+      "synthid_http": false,
+      "markllm": false
+    },
+    "harnesses": {
+      "markllm": false
+    }
+  },
+  "ok": true,
+  "results": [
+    {
+      "name": "collect_checks.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 10955,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "collect_checks.py",
+          "word_count": 1108,
+          "sentence_count": 276,
+          "burstiness_cv": 0.6803,
+          "lexical_diversity": 0.6648,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "collect_extra_evidence.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2783,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "collect_extra_evidence.py",
+          "word_count": 270,
+          "sentence_count": 64,
+          "burstiness_cv": 0.7189,
+          "lexical_diversity": 0.7097,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0625,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0625,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "export_anki.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 3976,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "export_anki.py",
+          "word_count": 458,
+          "sentence_count": 82,
+          "burstiness_cv": 0.7974,
+          "lexical_diversity": 0.705,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0625,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0625,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "verify_package.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 13319,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "verify_package.py",
+          "word_count": 1480,
+          "sentence_count": 235,
+          "burstiness_cv": 0.5896,
+          "lexical_diversity": 0.6476,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "add_abstracts.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 712,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "add_abstracts.py",
+          "word_count": 85,
+          "sentence_count": 22,
+          "burstiness_cv": 0.4821,
+          "lexical_diversity": 0.6172,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1067,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": [
+            "Sample word count (85) is in calibration range (30-100); score dampened by factor 0.87"
+          ]
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1067,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "app.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1003,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "app.py",
+          "word_count": 115,
+          "sentence_count": 29,
+          "burstiness_cv": 0.4975,
+          "lexical_diversity": 0.5955,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1225,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1225,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "backup_relations.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 962,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "backup_relations.py",
+          "word_count": 115,
+          "sentence_count": 24,
+          "burstiness_cv": 0.4683,
+          "lexical_diversity": 0.6445,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1225,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1225,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "check_laya.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1655,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "check_laya.py",
+          "word_count": 156,
+          "sentence_count": 52,
+          "burstiness_cv": 0.6178,
+          "lexical_diversity": 0.6643,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "embeddings.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2203,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "embeddings.py",
+          "word_count": 272,
+          "sentence_count": 60,
+          "burstiness_cv": 0.6578,
+          "lexical_diversity": 0.6228,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "entity_names.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 116,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "entity_names.py",
+          "word_count": 13,
+          "sentence_count": 5,
+          "burstiness_cv": null,
+          "lexical_diversity": 0.6154,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": null,
+          "confidence_level": null,
+          "density_tier": "uncalibrated",
+          "status": "insufficient_length",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": [
+            "Sample contains 13 words; statistical stylometry is uncalibrated below 30 words, so no score is reported"
+          ]
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": null,
+              "density_tier": "uncalibrated"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "eval.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1915,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "eval.py",
+          "word_count": 221,
+          "sentence_count": 53,
+          "burstiness_cv": 0.5415,
+          "lexical_diversity": 0.7487,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1525,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1525,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "eval_graph.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 11624,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "eval_graph.py",
+          "word_count": 1169,
+          "sentence_count": 250,
+          "burstiness_cv": 0.736,
+          "lexical_diversity": 0.772,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "eval_laya.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2963,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "eval_laya.py",
+          "word_count": 304,
+          "sentence_count": 87,
+          "burstiness_cv": 0.7832,
+          "lexical_diversity": 0.582,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "extract_triplets.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2516,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "extract_triplets.py",
+          "word_count": 265,
+          "sentence_count": 63,
+          "burstiness_cv": 0.6919,
+          "lexical_diversity": 0.6686,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "extraction.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1100,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "extraction.py",
+          "word_count": 131,
+          "sentence_count": 33,
+          "burstiness_cv": 0.525,
+          "lexical_diversity": 0.6559,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1225,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1225,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "fetch_papers.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1155,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "fetch_papers.py",
+          "word_count": 142,
+          "sentence_count": 31,
+          "burstiness_cv": 0.5518,
+          "lexical_diversity": 0.6548,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "laya_filter.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2129,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "laya_filter.py",
+          "word_count": 232,
+          "sentence_count": 54,
+          "burstiness_cv": 0.6361,
+          "lexical_diversity": 0.702,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0625,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0625,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "load_graph.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 2804,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "load_graph.py",
+          "word_count": 312,
+          "sentence_count": 73,
+          "burstiness_cv": 0.6159,
+          "lexical_diversity": 0.5688,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "merge_actgcg.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 9837,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "merge_actgcg.py",
+          "word_count": 1104,
+          "sentence_count": 244,
+          "burstiness_cv": 0.5773,
+          "lexical_diversity": 0.653,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "prepare_laya_eval.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1289,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "prepare_laya_eval.py",
+          "word_count": 134,
+          "sentence_count": 36,
+          "burstiness_cv": 0.6601,
+          "lexical_diversity": 0.6134,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "qa.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 4965,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "qa.py",
+          "word_count": 549,
+          "sentence_count": 131,
+          "burstiness_cv": 0.5873,
+          "lexical_diversity": 0.732,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0625,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0625,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "rebuild_relations.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 1833,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "rebuild_relations.py",
+          "word_count": 202,
+          "sentence_count": 51,
+          "burstiness_cv": 0.5609,
+          "lexical_diversity": 0.6095,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "retrieval.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 3131,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "retrieval.py",
+          "word_count": 376,
+          "sentence_count": 81,
+          "burstiness_cv": 0.7131,
+          "lexical_diversity": 0.7026,
+          "ai_ngram_density": 0.2128,
+          "matched_markers": [
+            {
+              "phrase": "world-class/state-of-the-art",
+              "count": 1,
+              "weight": 0.8,
+              "samples": [
+                "state-of-the-art"
+              ],
+              "spans": [
+                [
+                  407,
+                  423
+                ]
+              ]
+            }
+          ],
+          "score": 0.1525,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [
+            "AI cadence phrase 'world-class/state-of-the-art' (1x)"
+          ],
+          "findings_confidence": [
+            "informational"
+          ],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1525,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "__init__.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 61,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "__init__.py",
+          "word_count": 7,
+          "sentence_count": 2,
+          "burstiness_cv": null,
+          "lexical_diversity": 1.0,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": null,
+          "confidence_level": null,
+          "density_tier": "uncalibrated",
+          "status": "insufficient_length",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": [
+            "Sample contains 7 words; statistical stylometry is uncalibrated below 30 words, so no score is reported"
+          ]
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": null,
+              "density_tier": "uncalibrated"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "__init__.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 100,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "__init__.py",
+          "word_count": 13,
+          "sentence_count": 3,
+          "burstiness_cv": null,
+          "lexical_diversity": 0.8462,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": null,
+          "confidence_level": null,
+          "density_tier": "uncalibrated",
+          "status": "insufficient_length",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": [
+            "Sample contains 13 words; statistical stylometry is uncalibrated below 30 words, so no score is reported"
+          ]
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": null,
+              "density_tier": "uncalibrated"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test_eval_graph.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 7387,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "test_eval_graph.py",
+          "word_count": 636,
+          "sentence_count": 154,
+          "burstiness_cv": 0.534,
+          "lexical_diversity": 0.6305,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.1225,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.1225,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test_merge_actgcg.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 5120,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "test_merge_actgcg.py",
+          "word_count": 418,
+          "sentence_count": 124,
+          "burstiness_cv": 0.6442,
+          "lexical_diversity": 0.5632,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "test_retrieval.py",
+      "ok": true,
+      "kind": "text",
+      "report": {
+        "length": 4126,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "stylometry": {
+          "path": "test_retrieval.py",
+          "word_count": 387,
+          "sentence_count": 90,
+          "burstiness_cv": 0.5765,
+          "lexical_diversity": 0.5641,
+          "ai_ngram_density": 0.0,
+          "matched_markers": [],
+          "score": 0.0325,
+          "confidence_level": "CLEAN",
+          "density_tier": "low",
+          "status": "ok",
+          "findings": [],
+          "findings_confidence": [],
+          "notes": []
+        }
+      },
+      "suspicious": {
+        "verdict": false,
+        "description": "Combined across heterogeneous evidence classes. A hint to inspect further, not a single provenance judgment: a file flagged here is not necessarily watermark-free or human-authored.",
+        "classes": {
+          "provenance": {
+            "present": false,
+            "strength": "definitive",
+            "description": "Observable, deterministic provenance metadata (C2PA/Content Credentials or AI-metadata markers) embedded in the file. Strongest evidence class: directly inspectable, not inferred.",
+            "signals": {
+              "has_c2pa": false,
+              "has_ai_metadata": false
+            }
+          },
+          "layer_a_unicode": {
+            "present": false,
+            "strength": "deterministic",
+            "description": "Invisible/format Unicode carriers (Layer A) detected in the text body. Deterministic but edit-based: a known carrier was present, not proof of AI authorship.",
+            "signals": {
+              "suspicious_total": 0
+            }
+          },
+          "watermark_detector": {
+            "present": false,
+            "strength": "scheme_specific",
+            "description": "A positive result from a detector configured for a specific watermark scheme. Strong only for that scheme; it is not evidence of any other mark.",
+            "signals": {
+              "detected_any": false,
+              "detectors": [],
+              "synthid": null
+            }
+          },
+          "stylometry": {
+            "present": false,
+            "strength": "heuristic",
+            "description": "Stylometric AI-density score reached the threshold. Heuristic and statistical: weaker than observable metadata and subject to false positives.",
+            "signals": {
+              "score": 0.0325,
+              "density_tier": "low"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "papers": 500,
+  "triplet_records": 522,
+  "unique_paper_ids": 498,
+  "paper_ids_with_repeated_records": 24,
+  "relation_records": 3113,
+  "distinct_relations_per_paper": 3004,
+  "paper_ids_missing_from_extraction": [
+    "http://arxiv.org/abs/2611.17610v1",
+    "http://arxiv.org/abs/2611.23142v1"
+  ]
+}

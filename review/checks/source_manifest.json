@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-11-25T16:29:42.204656+00:00",
+  "files": {
+    ".gitignore": {
+      "sha256": "ed7b84e816359d17276a801802de5c362c2c572ce3e50a8670c8362b08351380",
+      "bytes": 109,
+      "lines": 10
+    },
+    ".python-version": {
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "bytes": 5,
+      "lines": 1
+    },
+    "README.md": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    "pyproject.toml": {
+      "sha256": "16b6a120a64f1ada0b1c48c4e673aa8f714070e96b8daedb15ca5915969e5760",
+      "bytes": 517,
+      "lines": 23
+    },
+    "scripts/add_abstracts.py": {
+      "sha256": "e65d12619320c7c030d7d856461201f6c7182745eff08d4bbab4184bed574533",
+      "bytes": 712,
+      "lines": 25
+    },
+    "scripts/app.py": {
+      "sha256": "b71f6035a0a1372b483463e743cc7cb0622806ac14dd80e4d7b560dd8f253739",
+      "bytes": 1003,
+      "lines": 36
+    },
+    "scripts/backup_relations.py": {
+      "sha256": "12fed6da176b02b8c2984f758f1945bcf48e4a16aac72853f337271671a69787",
+      "bytes": 981,
+      "lines": 25
+    },
+    "scripts/check_laya.py": {
+      "sha256": "bc268df9d804fffe00d6bb5f9d6fc99557e2374b0a8726bf77bc8598ae491820",
+      "bytes": 1655,
+      "lines": 52
+    },
+    "scripts/embeddings.py": {
+      "sha256": "d33808e507658844296484e1cd075c6dfd3b26c48876ee48eabb89485b5470db",
+      "bytes": 2203,
+      "lines": 64
+    },
+    "scripts/entity_names.py": {
+      "sha256": "2f7348ce453bf17ccdf3a557c483348c41a525f205ff193cf92af93531e96fc3",
+      "bytes": 116,
+      "lines": 6
+    },
+    "scripts/eval.py": {
+      "sha256": "d7949b11bb718f2479a954688104f0bfd7539c52feb3832847876264bc97ba65",
+      "bytes": 2025,
+      "lines": 60
+    },
+    "scripts/eval_graph.py": {
+      "sha256": "296ed4781f1d6f0b2eccb309afa278bfe98551260c465236448f1ec95030c62d",
+      "bytes": 11624,
+      "lines": 267
+    },
+    "scripts/eval_laya.py": {
+      "sha256": "2067f66a56efbd012c1459778e77cebb9bd9b4a05b98f514c5a205cbff4d879c",
+      "bytes": 2963,
+      "lines": 86
+    },
+    "scripts/extract_triplets.py": {
+      "sha256": "80ed49bcb0424efc63a0086dd80dbdd94cbbbe003f2eb1842c81b8bf93ff36da",
+      "bytes": 2736,
+      "lines": 66
+    },
+    "scripts/extraction.py": {
+      "sha256": "ad3fc8e81ad7bd2f315aa4f9942c42d2d03248ff096c8b30b3fab9cf8daa3317",
+      "bytes": 1100,
+      "lines": 38
+    },
+    "scripts/fetch_papers.py": {
+      "sha256": "d20fcb35944d0f51b84bec18e13bbab243615da8fe211404ba90bb80a93f49b4",
+      "bytes": 1155,
+      "lines": 35
+    },
+    "scripts/laya_filter.py": {
+      "sha256": "e67096168b0d37f70e818d267db7b88ded5dad65e7a60c97579d0ed3f30af4a6",
+      "bytes": 2173,
+      "lines": 59
+    },
+    "scripts/load_graph.py": {
+      "sha256": "7a3c464adacd1b83cff67c5673fb2e5f30bbffc4f18f0f48d469c34054118c5a",
+      "bytes": 2814,
+      "lines": 84
+    },
+    "scripts/merge_actgcg.py": {
+      "sha256": "8594df9a39345737a4de435baa33be60c2e44658dd2a77f13d22750e536da5a7",
+      "bytes": 9837,
+      "lines": 270
+    },
+    "scripts/prepare_laya_eval.py": {
+      "sha256": "491edcf817d84567c3e9bd70eee720a5ca0ea8bb6c8d494b5cac698305906113",
+      "bytes": 1304,
+      "lines": 37
+    },
+    "scripts/qa.py": {
+      "sha256": "0c9875d358602363981b75d2316d490aed67c79e45d0f14c9d38793bf82d4d70",
+      "bytes": 4976,
+      "lines": 148
+    },
+    "scripts/rebuild_relations.py": {
+      "sha256": "de27f3b0cb883fd912cd6c01d097395249609c38a1e0facba96b34ad46850b3e",
+      "bytes": 1833,
+      "lines": 57
+    },
+    "scripts/retrieval.py": {
+      "sha256": "6f0d4635919efb54f227946c70956bc8c1e5534bebf12027b167eb62ddfe545c",
+      "bytes": 3131,
+      "lines": 91
+    },
+    "src/__init__.py": {
+      "sha256": "d39ffbc54fddb3f33a5801ae1fb07982ead1fe7de0e3d77a96c42046bce9c66c",
+      "bytes": 61,
+      "lines": 2
+    },
+    "src/graphrag_papers/__init__.py": {
+      "sha256": "13341a527ddedf30d745ab63b955c425f507b702400f9ae43630acdf3230758c",
+      "bytes": 100,
+      "lines": 5
+    },
+    "tests/test_eval_graph.py": {
+      "sha256": "769fb9c930b57dc06fef8dda0869c8ea4c23aa8d662c0f5403c75f06ea8df19a",
+      "bytes": 7387,
+      "lines": 177
+    },
+    "tests/test_merge_actgcg.py": {
+      "sha256": "6329322e597d94f40330902d42974b26c7db0fab7f8dfd3619649895b4cfb96b",
+      "bytes": 5120,
+      "lines": 143
+    },
+    "tests/test_retrieval.py": {
+      "sha256": "fca2d10c5c2cc06bf03ced379530beba7beb90f7008ee5b6e398226720dbcc76",
+      "bytes": 4126,
+      "lines": 114
+    },
+    "uv.lock": {
+      "sha256": "9982bc1f6bf5bd9fc176ad64ade3454ae4a162409665536fb5ad9f8f57d14032",
+      "bytes": 387044,
+      "lines": 1954
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "created_at": "2026-11-25T18:37:46.615510+00:00",
+  "source_files_verified": 34,
+  "source_baseline": "review/checks/final_state.json",
+  "source_files_unchanged_since_selected_baseline": 34,
+  "original_python_files_syntax_ok": 24,
+  "review_tool_python_files_syntax_ok": 4,
+  "unique_cards": 154,
+  "core_cards": 83,
+  "tsv_rows_match_json": true,
+  "apkg_notes_and_cards_match_json": true,
+  "apkg_sqlite_integrity": "ok",
+  "export_hashes_match": true,
+  "markdown_local_links_checked": 40,
+  "walkthrough_covers_all_original_python_files": true,
+  "review_artifact_sha256": {
+    "review/CODE_WALKTHROUGH_RU.md": "2674e6e4c96212c850a61a2889c31b1b543484305b57e616fefb64a0158b5068",
+    "review/PROJECT_REVIEW_RU.md": "b55f2c2ed04cd623f3bae49d62cf8857c0b5c40fa53e8b14c867712d47c554ad",
+    "review/README.md": "f36c4baca62e8d8a08dac7a3177ab348cb843d8917dc9a9644d6aaa397866a3e",
+    "review/REVIEW_PRESENTATION_RU.md": "34932f404fba2fead5009d7ff700e15ad6c78f5e7f62539c5f7b29579e94d1e9",
+    "review/anki/README.md": "58c5117f27fb5fb41a67db014876aa26f4342cfe8d12556b45f92f927431ed53",
+    "review/anki/cards.json": "e6f741c5b8659618e37f478dc267522b77509f4c450d53c60254a39db3d3c00b",
+    "review/anki/graphrag_review_ru.tsv": "d672271ebe02194e168d14ab9fe6b387ba0c968b3643c6905dcc7633f80d03aa",
+    "review/anki/graphrag_review_ru.apkg": "25d1c680ec2c440290c4d4a2771353b698c156fa7e8113192e03e9b81035ad4a",
+    "review/tools/collect_checks.py": "b49badafe901346afb63375f2bb5dd700f1519f449160cc091ba39b2ccaef706",
+    "review/tools/collect_extra_evidence.py": "ed72a628222a9dcddd96be212bf379144a19a4b1fa72da0b377aaa6695c33f4d",
+    "review/tools/export_anki.py": "4462a5cc3d61073cea6c905ddc35c5a0f6e89849e931e1aed5afcdfcc5d31057",
+    "review/tools/verify_package.py": "6b61c5d6253336053d3ef08b905567f410ecf9219fc8a0af9d76921361af5635"
+  },
+  "saved_graph_input_embedding_api_numbers_verified": true,
+  "laya_confusion_matrix_recomputed": {
+    "tp": 3,
+    "fp": 8,
+    "fn": 0,
+    "tn": 7
+  },
+  "mini_eval_prompt_pairs_timings_and_url_counts_rechecked": true,
+  "unit_tests": {
+    "returncode": 0,
+    "count": 36,
+    "stderr": "test_api_ask_still_returns_string (test_eval_graph.EvalGraphTests.test_api_ask_still_returns_string) ... ok\ntest_citation_domain_is_not_a_substring_match (test_eval_graph.EvalGraphTests.test_citation_domain_is_not_a_substring_match) ... ok\ntest_citations_are_not_treated_as_entailment (test_eval_graph.EvalGraphTests.test_citations_are_not_treated_as_entailment) ... ok\ntest_empty_summary_does_not_invent_quality_or_metrics (test_eval_graph.EvalGraphTests.test_empty_summary_does_not_invent_quality_or_metrics) ... ok\ntest_generation_error_is_not_counted_as_an_abstention_or_success (test_eval_graph.EvalGraphTests.test_generation_error_is_not_counted_as_an_abstention_or_success) ... ok\ntest_generation_keeps_usage_and_flags_truncation (test_eval_graph.EvalGraphTests.test_generation_keeps_usage_and_flags_truncation) ... ok\ntest_prepare_cases_retrieves_once_per_question (test_eval_graph.EvalGraphTests.test_prepare_cases_retrieves_once_per_question) ... ok\ntest_prompts_only_differ_by_graph_facts (test_eval_graph.EvalGraphTests.test_prompts_only_differ_by_graph_facts) ... ok\ntest_resume_does_not_regenerate_saved_answers (test_eval_graph.EvalGraphTests.test_resume_does_not_regenerate_saved_answers) ... ok\ntest_retrieval_only_ask_excludes_graph_facts (test_eval_graph.EvalGraphTests.test_retrieval_only_ask_excludes_graph_facts) ... ok\ntest_runner_alternates_order_and_never_sends_reference_answers (test_eval_graph.EvalGraphTests.test_runner_alternates_order_and_never_sends_reference_answers) ... ok\ntest_unknown_citation_detected (test_eval_graph.EvalGraphTests.test_unknown_citation_detected) ... ok\ntest_versionless_citation_allowed_but_other_version_not_assumed (test_eval_graph.EvalGraphTests.test_versionless_citation_allowed_but_other_version_not_assumed) ... ok\ntest_already_merged_is_noop (test_merge_actgcg.MergeActGCGTests.test_already_merged_is_noop) ... ok\ntest_conflicting_metadata_aborts (test_merge_actgcg.MergeActGCGTests.test_conflicting_metadata_aborts) ... ok\ntest_conflicting_node_metadata_aborts (test_merge_actgcg.MergeActGCGTests.test_conflicting_node_metadata_aborts) ... ok\ntest_direction_sources_embedding_and_input_preserved (test_merge_actgcg.MergeActGCGTests.test_direction_sources_embedding_and_input_preserved) ... ok\ntest_duplicate_edges_union_sources (test_merge_actgcg.MergeActGCGTests.test_duplicate_edges_union_sources) ... ok\ntest_duplicate_mentions_collapse (test_merge_actgcg.MergeActGCGTests.test_duplicate_mentions_collapse) ... ok\ntest_invalid_sources_abort (test_merge_actgcg.MergeActGCGTests.test_invalid_sources_abort) ... ok\ntest_missing_canonical_aborts (test_merge_actgcg.MergeActGCGTests.test_missing_canonical_aborts) ... ok\ntest_reverse_relationship_is_not_collapsed (test_merge_actgcg.MergeActGCGTests.test_reverse_relationship_is_not_collapsed) ... ok\ntest_self_relationship_is_not_silently_discarded (test_merge_actgcg.MergeActGCGTests.test_self_relationship_is_not_silently_discarded) ... ok\ntest_unknown_relationship_aborts (test_merge_actgcg.MergeActGCGTests.test_unknown_relationship_aborts) ... ok\ntest_case_insensitive_hyphenated_name (test_retrieval.RetrievalTests.test_case_insensitive_hyphenated_name) ... ok\ntest_deduplicate_by_paper_id (test_retrieval.RetrievalTests.test_deduplicate_by_paper_id) ... ok\ntest_extract_method_names (test_retrieval.RetrievalTests.test_extract_method_names) ... ok\ntest_general_questions_keep_semantic_search (test_retrieval.RetrievalTests.test_general_questions_keep_semantic_search) ... ok\ntest_invalid_k (test_retrieval.RetrievalTests.test_invalid_k) ... ok\ntest_missing_exact_name_falls_back_to_vectors (test_retrieval.RetrievalTests.test_missing_exact_name_falls_back_to_vectors) ... ok\ntest_name_query_is_parameterized (test_retrieval.RetrievalTests.test_name_query_is_parameterized) ... ok\ntest_no_named_method_uses_only_vector_query (test_retrieval.RetrievalTests.test_no_named_method_uses_only_vector_query) ... ok\ntest_patterns_do_not_inject_regex_syntax (test_retrieval.RetrievalTests.test_patterns_do_not_inject_regex_syntax) ... ok\ntest_patterns_match_boundaries_and_separator_variants (test_retrieval.RetrievalTests.test_patterns_match_boundaries_and_separator_variants) ... ok\ntest_semantic_score_breaks_title_match_ties (test_retrieval.RetrievalTests.test_semantic_score_breaks_title_match_ties) ... ok\ntest_title_hit_can_recover_paper_outside_vector_top_k (test_retrieval.RetrievalTests.test_title_hit_can_recover_paper_outside_vector_top_k) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.003s\n\nOK\n"
+  },
+  "limitations": [
+    "No live Anki GUI import was performed; APKG was checked through ZIP/SQLite.",
+    "No new LLM generation, ingestion, Laya inference, migration, image/audio/video processing or proprietary watermark detection.",
+    "scripts/*.py carry the author's post-audit hand edit; walkthrough line numbers and quotes describe the audited snapshot.",
+    "Saved Neo4j/API/embedding evidence is a snapshot; no fresh live database checks in this verifier.",
+    "Mechanical consistency checks do not replace independent semantic/human review.",
+    "Ruff was not installed and no Ruff lint run was performed."
+  ]
+}

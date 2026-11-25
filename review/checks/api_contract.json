@@ -1,0 +1,12 @@
+{
+  "health": 200,
+  "valid_ask": 200,
+  "missing_question": 422,
+  "empty_question": 200,
+  "whitespace_question": 200,
+  "extra_field": 200,
+  "get_ask": 405,
+  "driver_closed_on_normal_shutdown": true,
+  "driver_closed_on_model_startup_failure": false,
+  "scope": "Mocked dependencies; no HTTP request to Ollama or Neo4j."
+}

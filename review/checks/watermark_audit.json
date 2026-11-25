@@ -1,0 +1,504 @@
+{
+  "upstream_revision": "5a62be6338d2812372b1da440e55c82922f97d53",
+  "mode": "Read-only Layer A audit. No prose/code rewriting; no network detectors.",
+  "scans": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/tmp/opencode/watermarks-remover-review-20261125/service/scripts/audit_dir.py",
+        "/home/kirill/projects/graphrag-papers/scripts",
+        "--json",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "report": {
+        "root": "/home/kirill/projects/graphrag-papers/scripts",
+        "files_scanned": 19,
+        "files_skipped": [],
+        "summary": {
+          "total": 19,
+          "read": 19,
+          "unrecognized": 0,
+          "by_kind": {
+            "text": 19
+          },
+          "with_c2pa": 0,
+          "with_ai_metadata": 0,
+          "with_suspicious_text": 0,
+          "actionable_files": 0,
+          "findings_by_confidence": {
+            "confirmed": 0,
+            "probable": 0,
+            "informational": 0,
+            "likely_false_positive": 0
+          }
+        },
+        "files": [
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/add_abstracts.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/app.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/backup_relations.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/check_laya.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/embeddings.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/entity_names.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/eval.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/eval_graph.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/eval_laya.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/extract_triplets.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/extraction.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/fetch_papers.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/laya_filter.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/load_graph.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/merge_actgcg.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/prepare_laya_eval.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/qa.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/rebuild_relations.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/scripts/retrieval.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/tmp/opencode/watermarks-remover-review-20261125/service/scripts/audit_dir.py",
+        "/home/kirill/projects/graphrag-papers/src",
+        "--json",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "report": {
+        "root": "/home/kirill/projects/graphrag-papers/src",
+        "files_scanned": 2,
+        "files_skipped": [],
+        "summary": {
+          "total": 2,
+          "read": 2,
+          "unrecognized": 0,
+          "by_kind": {
+            "text": 2
+          },
+          "with_c2pa": 0,
+          "with_ai_metadata": 0,
+          "with_suspicious_text": 0,
+          "actionable_files": 0,
+          "findings_by_confidence": {
+            "confirmed": 0,
+            "probable": 0,
+            "informational": 0,
+            "likely_false_positive": 0
+          }
+        },
+        "files": [
+          {
+            "path": "/home/kirill/projects/graphrag-papers/src/__init__.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/src/graphrag_papers/__init__.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/tmp/opencode/watermarks-remover-review-20261125/service/scripts/audit_dir.py",
+        "/home/kirill/projects/graphrag-papers/tests",
+        "--json",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "report": {
+        "root": "/home/kirill/projects/graphrag-papers/tests",
+        "files_scanned": 3,
+        "files_skipped": [],
+        "summary": {
+          "total": 3,
+          "read": 3,
+          "unrecognized": 0,
+          "by_kind": {
+            "text": 3
+          },
+          "with_c2pa": 0,
+          "with_ai_metadata": 0,
+          "with_suspicious_text": 0,
+          "actionable_files": 0,
+          "findings_by_confidence": {
+            "confirmed": 0,
+            "probable": 0,
+            "informational": 0,
+            "likely_false_positive": 0
+          }
+        },
+        "files": [
+          {
+            "path": "/home/kirill/projects/graphrag-papers/tests/test_eval_graph.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/tests/test_merge_actgcg.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          },
+          {
+            "path": "/home/kirill/projects/graphrag-papers/tests/test_retrieval.py",
+            "kind": "text",
+            "has_c2pa": false,
+            "has_ai_metadata": false,
+            "suspicious_total": 0,
+            "findings": [],
+            "confidence": [],
+            "notes": [
+              "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+              "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+              "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+              "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+              "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

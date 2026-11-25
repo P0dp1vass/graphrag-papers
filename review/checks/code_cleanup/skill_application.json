@@ -1,0 +1,43 @@
+{
+  "skill": "remove-ai-marks",
+  "upstream": "https://github.com/guillaumemeyer/watermarks-remover",
+  "upstream_revision": "5a62be6338d2812372b1da440e55c82922f97d53",
+  "upstream_license": "MIT",
+  "requested_operation": "Explicit user-requested in-place processing of all project Python files using the skill's code route.",
+  "service": "Temporary authenticated loopback HTTP server; /health, /capabilities, /inspect/batch before and after; stopped after use.",
+  "python_files": 28,
+  "changed_files": 25,
+  "formatting_changes": true,
+  "comments_edited": true,
+  "ast_equal": true,
+  "runtime_string_values_equal": true,
+  "unicode_findings_before": 0,
+  "unicode_findings_after": 0,
+  "unicode_characters_removed": 0,
+  "unit_tests": 36,
+  "test_exit_code": 0,
+  "formatter_check_exit_code": 0,
+  "layer_b_recommended": "Best-effort statistical-mark reduction for prose. Not applied to Python via the service's whole-file text path because the installed revision requires Layer B and may rewrite syntax.",
+  "service_capabilities": {
+    "text_detectors.markllm": false,
+    "text_detectors.gumbel": false,
+    "text_detectors.claude-text": false,
+    "scorers.synthid": false,
+    "scorers.synthid_http": false,
+    "pixel_backends.ctrlregen": false,
+    "pixel_backends.diffusion": false
+  },
+  "disclosure": "A technical cleaning pass does not prove human authorship and does not conceal or misrepresent AI assistance where disclosure is required.",
+  "evidence": [
+    "review/checks/code_cleanup/processing_report.json",
+    "review/checks/code_cleanup/service_before.json",
+    "review/checks/code_cleanup/service_after.json",
+    "review/checks/code_cleanup/post_checks.json"
+  ],
+  "out_of_scope": [
+    "No proprietary statistical watermark detector was configured.",
+    "No claim of undetectability or human authorship.",
+    "No whole-file /clean call on Python because Layer B may corrupt code.",
+    "No hooks, persistent service autostart, image/audio/video processing, or backend installation."
+  ]
+}

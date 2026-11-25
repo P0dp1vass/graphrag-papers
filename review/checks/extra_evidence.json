@@ -1,0 +1,124 @@
+{
+  "scope": "Offline structural examples, saved Laya results, installed core dependency versions.",
+  "versions": {
+    "fastapi": "0.165.0",
+    "neo4j": "6.4.1",
+    "requests": "2.34.2",
+    "sentence-transformers": "6.3.0",
+    "uvicorn": "0.54.0"
+  },
+  "validation_examples": {
+    "non_string_entities_accepted": {
+      "input": {
+        "entities": [
+          1,
+          2
+        ],
+        "relations": [
+          {
+            "head": 1,
+            "relation": "USES",
+            "tail": 2
+          }
+        ]
+      },
+      "output": {
+        "entities": [
+          1,
+          2
+        ],
+        "relations": [
+          {
+            "head": 1,
+            "relation": "USES",
+            "tail": 2
+          }
+        ]
+      }
+    },
+    "unknown_relation_downgraded": {
+      "input": {
+        "entities": [
+          "A",
+          "B"
+        ],
+        "relations": [
+          {
+            "head": "A",
+            "relation": "INVENTED",
+            "tail": "B"
+          }
+        ]
+      },
+      "output": {
+        "entities": [
+          "A",
+          "B"
+        ],
+        "relations": [
+          {
+            "head": "A",
+            "relation": "RELATED_TO",
+            "tail": "B"
+          }
+        ]
+      }
+    },
+    "self_relation_accepted": {
+      "input": {
+        "entities": [
+          "A"
+        ],
+        "relations": [
+          {
+            "head": "A",
+            "relation": "IMPROVES",
+            "tail": "A"
+          }
+        ]
+      },
+      "output": {
+        "entities": [
+          "A"
+        ],
+        "relations": [
+          {
+            "head": "A",
+            "relation": "IMPROVES",
+            "tail": "A"
+          }
+        ]
+      }
+    },
+    "null_entities_crash": {
+      "input": {
+        "entities": null,
+        "relations": []
+      },
+      "error_type": "TypeError",
+      "message": "'NoneType' object is not iterable"
+    },
+    "non_object_relation_crash": {
+      "input": {
+        "entities": [
+          "A"
+        ],
+        "relations": [
+          42
+        ]
+      },
+      "error_type": "AttributeError",
+      "message": "'int' object has no attribute 'get'"
+    }
+  },
+  "laya_counts_recomputed": {
+    "tp": 3,
+    "fp": 8,
+    "fn": 0,
+    "tn": 7
+  },
+  "laya_saved_metrics_consistent": true,
+  "source_files_checked": 29,
+  "changed_source_files": [],
+  "ruff": "Not installed; no Ruff lint run was performed."
+}

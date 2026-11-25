@@ -1,0 +1,367 @@
+{
+  "created_at": "2026-11-25T17:36:46.005063+00:00",
+  "skill_revision": "5a62be6338d2812372b1da440e55c82922f97d53",
+  "scope": "All project Python in scripts/, src/, tests/, review/tools/; excludes vendored skill, .venv, caches and data.",
+  "processing": [
+    "Temporary authenticated loopback-only upstream HTTP service; /health, /capabilities, /inspect/batch before and after.",
+    "Skill code route: formatter plus comment editing; runtime strings, prompts, public names and AI-assistance disclosures preserved.",
+    "Black 26.10.1; no prose-generating /clean on Python because it requires Layer B and could corrupt code."
+  ],
+  "files_processed": 28,
+  "files_changed": 25,
+  "unicode_findings_before": 0,
+  "unicode_findings_after": 0,
+  "unicode_characters_removed": 0,
+  "all_python_asts_equal": true,
+  "runtime_string_values_equal": true,
+  "files": {
+    "review/tools/collect_checks.py": {
+      "before_sha256": "b8db7e963eb1472497508c65c48c9d8de92d2ce9f496a2a2358629b3939f60d7",
+      "after_sha256": "b49badafe901346afb63375f2bb5dd700f1519f449160cc091ba39b2ccaef706",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "review/tools/collect_extra_evidence.py": {
+      "before_sha256": "864163e34d28f14cad87c742818aca67ddb4ef15681a309e640bade8ec7f98c1",
+      "after_sha256": "ed72a628222a9dcddd96be212bf379144a19a4b1fa72da0b377aaa6695c33f4d",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "review/tools/export_anki.py": {
+      "before_sha256": "f9ab3a399c450bd36e7c5bd49747e59d056e53a23efe1eb2581dd8f9bbe59dd6",
+      "after_sha256": "4462a5cc3d61073cea6c905ddc35c5a0f6e89849e931e1aed5afcdfcc5d31057",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "review/tools/verify_package.py": {
+      "before_sha256": "69ae3d593321e016b8a9045658bf91d536b36711fb379abaf0bcf90a2b378403",
+      "after_sha256": "247dad0626794e8e944570e39baf635906172c825eaf7f7179b690bda7bddb2f",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/add_abstracts.py": {
+      "before_sha256": "e65d12619320c7c030d7d856461201f6c7182745eff08d4bbab4184bed574533",
+      "after_sha256": "122e776a78bb5d33c0616cdd3982883b9fb7bfbd0400cfb799da44d7f27311d4",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/app.py": {
+      "before_sha256": "b71f6035a0a1372b483463e743cc7cb0622806ac14dd80e4d7b560dd8f253739",
+      "after_sha256": "5bfc04da9d160d93e2ce73ccc53e3cc3902d9ce1a2ad1c4877798eb7ec60c01f",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/backup_relations.py": {
+      "before_sha256": "12fed6da176b02b8c2984f758f1945bcf48e4a16aac72853f337271671a69787",
+      "after_sha256": "8237e2b10818a4abfde87035ee3c65871a0223623d35145d5d12d73e2bc911bf",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/check_laya.py": {
+      "before_sha256": "bc268df9d804fffe00d6bb5f9d6fc99557e2374b0a8726bf77bc8598ae491820",
+      "after_sha256": "0cdedaf86edc7c8d298f635f42aa61222dd5c267e5b5b0ca005a611538d54fd6",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/embeddings.py": {
+      "before_sha256": "d33808e507658844296484e1cd075c6dfd3b26c48876ee48eabb89485b5470db",
+      "after_sha256": "0b4eb4e6e74cc5be98edff1c5b9d9bc4f3b398517620e26f835ce3bb7aa5a20d",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/entity_names.py": {
+      "before_sha256": "2f7348ce453bf17ccdf3a557c483348c41a525f205ff193cf92af93531e96fc3",
+      "after_sha256": "23de6e3617ae45afd13c9628188d6538cc8b2b370b9038b97042cbe70e2eb815",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/eval.py": {
+      "before_sha256": "d7949b11bb718f2479a954688104f0bfd7539c52feb3832847876264bc97ba65",
+      "after_sha256": "ce2ca062ead832da257e7281eea856a8d95528593a2779e6cfe9a3bd22bedc25",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/eval_graph.py": {
+      "before_sha256": "296ed4781f1d6f0b2eccb309afa278bfe98551260c465236448f1ec95030c62d",
+      "after_sha256": "acb73427ef86c24a677e649e4482d52775e999ad7b9129a56542ea83710f04e6",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/eval_laya.py": {
+      "before_sha256": "2067f66a56efbd012c1459778e77cebb9bd9b4a05b98f514c5a205cbff4d879c",
+      "after_sha256": "482d7434a51e06ac0d663ab598f33caf76e27015db1c89e9f51f07706f7dae40",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/extract_triplets.py": {
+      "before_sha256": "80ed49bcb0424efc63a0086dd80dbdd94cbbbe003f2eb1842c81b8bf93ff36da",
+      "after_sha256": "e9f2f93bf5d2cac8866b13dd80ebfd2ce6d27193c37f40ca7541049964c46c29",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/extraction.py": {
+      "before_sha256": "ad3fc8e81ad7bd2f315aa4f9942c42d2d03248ff096c8b30b3fab9cf8daa3317",
+      "after_sha256": "567f4832bf44144fa6cdc643ce1737b839f5465183c9d0e61437e17c3a1c2cb3",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/fetch_papers.py": {
+      "before_sha256": "d20fcb35944d0f51b84bec18e13bbab243615da8fe211404ba90bb80a93f49b4",
+      "after_sha256": "6f3ff17b0c12cd7bf48c7ff1dfd915aef47fe37ece64527c9b0cd636ea290953",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/laya_filter.py": {
+      "before_sha256": "e67096168b0d37f70e818d267db7b88ded5dad65e7a60c97579d0ed3f30af4a6",
+      "after_sha256": "f824768c8618bbb077e24d1c6c3748bac52135a2d9c2aa2b3a40ef100d14f829",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/load_graph.py": {
+      "before_sha256": "7a3c464adacd1b83cff67c5673fb2e5f30bbffc4f18f0f48d469c34054118c5a",
+      "after_sha256": "9946425c2dd055a137a72d9757d221b46942dda8913f5639ce0cc04079b5e971",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/merge_actgcg.py": {
+      "before_sha256": "8594df9a39345737a4de435baa33be60c2e44658dd2a77f13d22750e536da5a7",
+      "after_sha256": "9e238fc686cbd12834fef9573c045dee5df685f99764d86130cd450587048bf8",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/prepare_laya_eval.py": {
+      "before_sha256": "491edcf817d84567c3e9bd70eee720a5ca0ea8bb6c8d494b5cac698305906113",
+      "after_sha256": "3cf7e4219204b8a18ffbaf5b6fb850fea0f44495d0f1bebc1c42a26eda9c1394",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/qa.py": {
+      "before_sha256": "0c9875d358602363981b75d2316d490aed67c79e45d0f14c9d38793bf82d4d70",
+      "after_sha256": "f58ffef0239644267285e0611baa3c29d12f992c0db5958cb904f8d111eacf9f",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/rebuild_relations.py": {
+      "before_sha256": "de27f3b0cb883fd912cd6c01d097395249609c38a1e0facba96b34ad46850b3e",
+      "after_sha256": "2682f894d9f84cac83bae8bd65977a8159a0b261064aaaffa5832b959473c958",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "scripts/retrieval.py": {
+      "before_sha256": "6f0d4635919efb54f227946c70956bc8c1e5534bebf12027b167eb62ddfe545c",
+      "after_sha256": "42ddb47892c88171c2fbf0c2a7a619b9c2f6f36e9f29bc70c5b6cc5fa0383292",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "src/__init__.py": {
+      "before_sha256": "d39ffbc54fddb3f33a5801ae1fb07982ead1fe7de0e3d77a96c42046bce9c66c",
+      "after_sha256": "d39ffbc54fddb3f33a5801ae1fb07982ead1fe7de0e3d77a96c42046bce9c66c",
+      "changed": false,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "src/graphrag_papers/__init__.py": {
+      "before_sha256": "13341a527ddedf30d745ab63b955c425f507b702400f9ae43630acdf3230758c",
+      "after_sha256": "13341a527ddedf30d745ab63b955c425f507b702400f9ae43630acdf3230758c",
+      "changed": false,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "tests/test_eval_graph.py": {
+      "before_sha256": "769fb9c930b57dc06fef8dda0869c8ea4c23aa8d662c0f5403c75f06ea8df19a",
+      "after_sha256": "cc40d7c84f2ebb45d4cc3c5271553667972e2faaf867501c0227bbe9ab3239d0",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "tests/test_merge_actgcg.py": {
+      "before_sha256": "6329322e597d94f40330902d42974b26c7db0fab7f8dfd3619649895b4cfb96b",
+      "after_sha256": "6329322e597d94f40330902d42974b26c7db0fab7f8dfd3619649895b4cfb96b",
+      "changed": false,
+      "ast_equal": true,
+      "string_values_equal": true
+    },
+    "tests/test_retrieval.py": {
+      "before_sha256": "fca2d10c5c2cc06bf03ced379530beba7beb90f7008ee5b6e398226720dbcc76",
+      "after_sha256": "5568609ea4f6a0a445443e5ecb270689c9c651f023b2e073d94e3dabd9c3b206",
+      "changed": true,
+      "ast_equal": true,
+      "string_values_equal": true
+    }
+  },
+  "original_scope_after": {
+    ".gitignore": {
+      "sha256": "ed7b84e816359d17276a801802de5c362c2c572ce3e50a8670c8362b08351380",
+      "bytes": 109,
+      "lines": 10
+    },
+    ".python-version": {
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "bytes": 5,
+      "lines": 1
+    },
+    "README.md": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0
+    },
+    "pyproject.toml": {
+      "sha256": "16b6a120a64f1ada0b1c48c4e673aa8f714070e96b8daedb15ca5915969e5760",
+      "bytes": 517,
+      "lines": 23
+    },
+    "scripts/add_abstracts.py": {
+      "sha256": "122e776a78bb5d33c0616cdd3982883b9fb7bfbd0400cfb799da44d7f27311d4",
+      "bytes": 719,
+      "lines": 28
+    },
+    "scripts/app.py": {
+      "sha256": "5bfc04da9d160d93e2ce73ccc53e3cc3902d9ce1a2ad1c4877798eb7ec60c01f",
+      "bytes": 1010,
+      "lines": 42
+    },
+    "scripts/backup_relations.py": {
+      "sha256": "8237e2b10818a4abfde87035ee3c65871a0223623d35145d5d12d73e2bc911bf",
+      "bytes": 952,
+      "lines": 23
+    },
+    "scripts/check_laya.py": {
+      "sha256": "0cdedaf86edc7c8d298f635f42aa61222dd5c267e5b5b0ca005a611538d54fd6",
+      "bytes": 1656,
+      "lines": 52
+    },
+    "scripts/embeddings.py": {
+      "sha256": "0b4eb4e6e74cc5be98edff1c5b9d9bc4f3b398517620e26f835ce3bb7aa5a20d",
+      "bytes": 2255,
+      "lines": 72
+    },
+    "scripts/entity_names.py": {
+      "sha256": "23de6e3617ae45afd13c9628188d6538cc8b2b370b9038b97042cbe70e2eb815",
+      "bytes": 118,
+      "lines": 7
+    },
+    "scripts/eval.py": {
+      "sha256": "ce2ca062ead832da257e7281eea856a8d95528593a2779e6cfe9a3bd22bedc25",
+      "bytes": 2025,
+      "lines": 64
+    },
+    "scripts/eval_graph.py": {
+      "sha256": "acb73427ef86c24a677e649e4482d52775e999ad7b9129a56542ea83710f04e6",
+      "bytes": 11811,
+      "lines": 278
+    },
+    "scripts/eval_laya.py": {
+      "sha256": "482d7434a51e06ac0d663ab598f33caf76e27015db1c89e9f51f07706f7dae40",
+      "bytes": 2952,
+      "lines": 85
+    },
+    "scripts/extract_triplets.py": {
+      "sha256": "e9f2f93bf5d2cac8866b13dd80ebfd2ce6d27193c37f40ca7541049964c46c29",
+      "bytes": 2767,
+      "lines": 75
+    },
+    "scripts/extraction.py": {
+      "sha256": "567f4832bf44144fa6cdc643ce1737b839f5465183c9d0e61437e17c3a1c2cb3",
+      "bytes": 1100,
+      "lines": 41
+    },
+    "scripts/fetch_papers.py": {
+      "sha256": "6f3ff17b0c12cd7bf48c7ff1dfd915aef47fe37ece64527c9b0cd636ea290953",
+      "bytes": 1154,
+      "lines": 38
+    },
+    "scripts/laya_filter.py": {
+      "sha256": "f824768c8618bbb077e24d1c6c3748bac52135a2d9c2aa2b3a40ef100d14f829",
+      "bytes": 2231,
+      "lines": 67
+    },
+    "scripts/load_graph.py": {
+      "sha256": "9946425c2dd055a137a72d9757d221b46942dda8913f5639ce0cc04079b5e971",
+      "bytes": 2883,
+      "lines": 99
+    },
+    "scripts/merge_actgcg.py": {
+      "sha256": "9e238fc686cbd12834fef9573c045dee5df685f99764d86130cd450587048bf8",
+      "bytes": 9849,
+      "lines": 268
+    },
+    "scripts/prepare_laya_eval.py": {
+      "sha256": "3cf7e4219204b8a18ffbaf5b6fb850fea0f44495d0f1bebc1c42a26eda9c1394",
+      "bytes": 1300,
+      "lines": 36
+    },
+    "scripts/qa.py": {
+      "sha256": "f58ffef0239644267285e0611baa3c29d12f992c0db5958cb904f8d111eacf9f",
+      "bytes": 5093,
+      "lines": 161
+    },
+    "scripts/rebuild_relations.py": {
+      "sha256": "2682f894d9f84cac83bae8bd65977a8159a0b261064aaaffa5832b959473c958",
+      "bytes": 1840,
+      "lines": 60
+    },
+    "scripts/retrieval.py": {
+      "sha256": "42ddb47892c88171c2fbf0c2a7a619b9c2f6f36e9f29bc70c5b6cc5fa0383292",
+      "bytes": 3176,
+      "lines": 106
+    },
+    "src/__init__.py": {
+      "sha256": "d39ffbc54fddb3f33a5801ae1fb07982ead1fe7de0e3d77a96c42046bce9c66c",
+      "bytes": 61,
+      "lines": 2
+    },
+    "src/graphrag_papers/__init__.py": {
+      "sha256": "13341a527ddedf30d745ab63b955c425f507b702400f9ae43630acdf3230758c",
+      "bytes": 100,
+      "lines": 5
+    },
+    "tests/test_eval_graph.py": {
+      "sha256": "cc40d7c84f2ebb45d4cc3c5271553667972e2faaf867501c0227bbe9ab3239d0",
+      "bytes": 7970,
+      "lines": 208
+    },
+    "tests/test_merge_actgcg.py": {
+      "sha256": "6329322e597d94f40330902d42974b26c7db0fab7f8dfd3619649895b4cfb96b",
+      "bytes": 5120,
+      "lines": 143
+    },
+    "tests/test_retrieval.py": {
+      "sha256": "5568609ea4f6a0a445443e5ecb270689c9c651f023b2e073d94e3dabd9c3b206",
+      "bytes": 4156,
+      "lines": 116
+    },
+    "uv.lock": {
+      "sha256": "9982bc1f6bf5bd9fc176ad64ade3454ae4a162409665536fb5ad9f8f57d14032",
+      "bytes": 387044,
+      "lines": 1954
+    }
+  },
+  "limitations": [
+    "No proprietary statistical watermark detector was configured; no claim of undetectability or human authorship.",
+    "AST equivalence and tests do not certify all external dependencies or semantic answer quality."
+  ],
+  "service_stopped": true
+}

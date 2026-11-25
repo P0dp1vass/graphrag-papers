@@ -1,0 +1,212 @@
+{
+  "metrics": {
+    "evaluated": 18,
+    "tp": 3,
+    "fp": 8,
+    "fn": 0,
+    "tn": 7,
+    "accuracy": 0.5555555555555556,
+    "precision": 0.2727272727272727,
+    "recall": 1.0
+  },
+  "results": [
+    {
+      "example": 1,
+      "paper_id": "http://arxiv.org/abs/2611.25361v1",
+      "claim": "Qlt-Arg extends AFs.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.4765,
+        "B": 0.5235
+      }
+    },
+    {
+      "example": 2,
+      "paper_id": "http://arxiv.org/abs/2611.18471v1",
+      "claim": "abstraction improves execution observability.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.6074,
+        "B": 0.3926
+      }
+    },
+    {
+      "example": 3,
+      "paper_id": "http://arxiv.org/abs/2611.17460v1",
+      "claim": "DOCUMENT_RULE_VIOLATIONS is evaluated on UNFINISHED_BENCH.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.8325,
+        "B": 0.1675
+      }
+    },
+    {
+      "example": 4,
+      "paper_id": "http://arxiv.org/abs/2611.20734v1",
+      "claim": "EVALUATING improves PRODUCT_ADVICE.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.6196,
+        "B": 0.3804
+      }
+    },
+    {
+      "example": 5,
+      "paper_id": "http://arxiv.org/abs/2611.20405v1",
+      "claim": "Gemma-2-2B-IT is evaluated on B1.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.7221,
+        "B": 0.2779
+      }
+    },
+    {
+      "example": 6,
+      "paper_id": "http://arxiv.org/abs/2611.20071v1",
+      "claim": "LLMs improves accuracy.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.3543,
+        "B": 0.6457
+      }
+    },
+    {
+      "example": 7,
+      "paper_id": "http://arxiv.org/abs/2611.19094v1",
+      "claim": "MORFESSOR extends TP.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.4571,
+        "B": 0.5429
+      }
+    },
+    {
+      "example": 9,
+      "paper_id": "http://arxiv.org/abs/2611.25818v1",
+      "claim": "CONTRACT improves SEMANTIC_ENTROPY.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.432,
+        "B": 0.568
+      }
+    },
+    {
+      "example": 10,
+      "paper_id": "http://arxiv.org/abs/2611.23900v1",
+      "claim": "LEXICON extends CRNN.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.6289,
+        "B": 0.3711
+      }
+    },
+    {
+      "example": 11,
+      "paper_id": "http://arxiv.org/abs/2611.18104v1",
+      "claim": "Lineup extends classifier.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.5322,
+        "B": 0.4678
+      }
+    },
+    {
+      "example": 12,
+      "paper_id": "http://arxiv.org/abs/2611.24651v1",
+      "claim": "Piccolo improves Private.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.4959,
+        "B": 0.5041
+      }
+    },
+    {
+      "example": 14,
+      "paper_id": "http://arxiv.org/abs/2611.17481v1",
+      "claim": "UNIVERSAL_SUFFIXES improves SUFFIX.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.4002,
+        "B": 0.5998
+      }
+    },
+    {
+      "example": 15,
+      "paper_id": "http://arxiv.org/abs/2611.17481v1",
+      "claim": "ActGCG improves steering vector.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.5662,
+        "B": 0.4338
+      }
+    },
+    {
+      "example": 16,
+      "paper_id": "http://arxiv.org/abs/2611.18284v1",
+      "claim": "language model is evaluated on PIZZA benchmark.",
+      "expected": "A",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.9406,
+        "B": 0.0594
+      }
+    },
+    {
+      "example": 17,
+      "paper_id": "http://arxiv.org/abs/2611.20003v1",
+      "claim": "TECHNICAL_REPORT is evaluated on ABLACTION_STUDIES.",
+      "expected": "B",
+      "predicted": "B",
+      "probabilities": {
+        "A": 0.3494,
+        "B": 0.6506
+      }
+    },
+    {
+      "example": 18,
+      "paper_id": "http://arxiv.org/abs/2611.20145v1",
+      "claim": "mDeBERTa-v3-base improves UI grounding.",
+      "expected": "A",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.6087,
+        "B": 0.3913
+      }
+    },
+    {
+      "example": 19,
+      "paper_id": "http://arxiv.org/abs/2611.23155v1",
+      "claim": "AdaLN improves TextSphere.",
+      "expected": "B",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.8472,
+        "B": 0.1528
+      }
+    },
+    {
+      "example": 20,
+      "paper_id": "http://arxiv.org/abs/2611.24844v1",
+      "claim": "LARGER_MODELS is related to WITHHELD_DATA.",
+      "expected": "A",
+      "predicted": "A",
+      "probabilities": {
+        "A": 0.5389,
+        "B": 0.4611
+      }
+    }
+  ]
+}

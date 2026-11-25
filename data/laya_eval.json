@@ -1,0 +1,202 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2611.25361v1",
+    "abstract": "Argumentation frameworks (AFs) provide explicit, formal mechanisms for representing and resolving conflicts and thus have been incorporated into large language model (LLM) decision-making. The benefits vary and depend on how arguments and their relations are constructed, evaluated, and incorporated into the decision process. {We abstract a workflow consisting of four stages based on existing argumentation-augmented methods} and investigate their design choices over tasks of debate-based decision-making and retrieval-based fact verification. Our evaluation with recent LLMs shows that existing methods do not consistently improve performance across the considered tasks. Motivated by this observation, we develop two task-specific methods. The first is called Qnt-Arg, which organizes arguments around the original speakers in debate materials and aggregates model-estimated argument strengths and candidate-answer priors under gradual semantics. The second is Qlt-Arg that uses credibility estimates to establish preferences between conflicting evidence items and applies grounded semantics to select acceptable evidence for subsequent LLM inference. We examine the roles of generative and decision models within the two methods. In the debate setting, Qnt-Arg consistently outperforms other argumentation-augmented methods across matched configurations; Qlt-Arg improves retrieval-based fact-verification performance compared with the baselines. These findings demonstrate the value of combining formal argumentation and LLM while highlighting the importance of aligning with tasks in argumentation construction, model selection, and the role of formal semantic reasoning.",
+    "head": "Qlt-Arg",
+    "relation": "EXTENDS",
+    "tail": "AFs",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Qlt-Arg использует grounded semantics и аргументацию; расширение самих argumentation frameworks в абстракте не заявлено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.18471v1",
+    "abstract": "LLM-based verifiers are increasingly used to evaluate agent executions, but their reliability is typically measured under a single representation of the trajectory. In deployed agent systems, the same execution may be exposed through composed tools, delegation boundaries, or compacted histories, changing what execution evidence is directly observable to the verifier. It therefore remains unclear whether correct verifier judgments persist across such abstraction boundaries. We introduce Verification Transport, a reliability test that measures judgment stability under abstraction-induced changes in execution observability. We construct matched native, abstracted, and restored views of the same frozen executions while holding the task, realized trajectory, outcome, ground truth, evaluation criterion, and verifier fixed. Across four agent-evaluation benchmarks, seven verifier backbones, four verification protocols, and three abstraction boundaries, we find substantial transport failure, reaching about 31% under macro abstraction and delegation. Verification protocols exhibit distinct failure modes: direct verification more often produces incorrect verdicts, whereas evidence-grounded and deliberative protocols tend to abstain under limited observability. This suggests that lower transport failure rates do not necessarily imply greater reliability. Restoring the corresponding execution provenance recovers 85.5% of transport failures, while recovery is lower when provenance is lossy or unavailable. These results show that native-view accuracy alone is insufficient to characterize verifier reliability when execution evidence crosses abstraction boundaries.",
+    "head": "abstraction",
+    "relation": "IMPROVES",
+    "tail": "execution observability",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Абстракция меняет доступность свидетельств и может ограничивать наблюдаемость; ее улучшение не заявлено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.17460v1",
+    "abstract": "AI agents are increasingly equipped with persistence toward task completion to run delegated work autonomously for long periods, under many unstated constraints from internal documents and other people's authority. When completion requires violating a rule, the agent must decide alone, yet benchmarks of instruction-rule conflicts state the rule in the prompt or keep it hidden and do not evaluate persistence. We present Unfinished-Bench, a benchmark that gives models persistence in autonomous runs without a user, in realistic work environments with embedded rules. In each of its 97 scenarios across 7 organizations and 7 risk categories, the goal and the rule cannot both hold. We find that persistence raised violations of a rule in an internal document from 32.2% to 43.6%, five times the 8.5% for the same rule stated by the user. Of the document-rule violations, 98.3% occurred after the rule was displayed, and in 89% of a judged sample the agent first wrote down the rule. Violations of rules placed in the environment without user oversight can lead to serious incidents, so persistence-driven risks need to be evaluated. Benchmark documentation: https://francis21c.github.io/unfinished-bench/",
+    "head": "DOCUMENT_RULE_VIOLATIONS",
+    "relation": "EVALUATED_ON",
+    "tail": "UNFINISHED_BENCH",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "При принятом смысле EVALUATED_ON оцениваемым субъектом должна быть модель или метод. Нарушения правил здесь измеряемый исход на бенчмарке, а не оцениваемая модель; нужна связь вроде MEASURED_ON."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.20734v1",
+    "abstract": "Evaluating product advice from a language model requires assessing whether the recommendation meets the user's needs and identifying where the model falls short when it does not. However, matching a product mentioned in an online reply cannot answer either question on its own: several products may be suitable, and the recorded answer may itself be poor advice. When shown a community-listed alternative alongside their own sampled car recommendation, six models prefer the alternative in 1.9 to 6.5 percent of eligible disagreements, consistently across both source-blind presentation orders. We propose a diagnostic framework that separates the user's stated needs, the model's added assumptions, candidate generation, filtering, and final choice, with 19 possible failure modes and the evidence needed to assess them. We apply this framework to product-advice data and to a separate product-selection task with externally assigned relevance labels. The experiments distinguish naming a community-listed product from selecting it and show how answer extraction and candidate-list construction affect the outcome.",
+    "head": "EVALUATING",
+    "relation": "IMPROVES",
+    "tail": "PRODUCT_ADVICE",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Предложена диагностика качества рекомендаций; доказанного улучшения рекомендаций от самого оценивания не заявлено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.20405v1",
+    "abstract": "Prior work shows that refusal in instruction-tuned language models can be ablated by intervening on a single residual-stream direction (Arditi et al., 2024), and more recent work finds multiple refusal-mediating directions and concept cones (Wollschläger et al., 2025). We ask a different question: do refusal-related directions carry information about the register of refusal language - how the model refuses - and not only whether it refuses? In Gemma-2-9B-IT we identify two SVM-derived linear directions (B1 for harmful-content vs. neutral, B2 for self-reference vs. neutral) at layer 20 with cos(B1, B2) = 0.252 (about 75 degrees, substantially non-parallel). Adding the harmful-vs-neutral difference-of-means direction (cosine 0.68 with B1) to the residual stream of self-reference prompts at alpha = 2.0 shifts content-safety vocabulary from 2.55 to 10.37 hits per 100 tokens, while a magnitude-matched random direction produces 1.13-2.16; the model continues to refuse but switches register from meta-style (\"as a language model...\") to content-style (\"this would be harmful\"). The same register-injection effect reproduces qualitatively in Gemma-2-2B-IT at layer 12 (content vocabulary 1.72 -> 6.37 at alpha = 1.0, vs. random control 1.35), with a narrower coherent-injection window than in 9B. The two directions are not symmetric: the B2 -> harmful intervention produces a much smaller register effect, and across ablation, sufficiency, and injection B1's causal effects are consistently larger than B2's. We frame this asymmetry as part of the finding: B1 appears to encode both category detection and refusal-vocabulary information, while B2 encodes primarily category detection. We frame the contribution as identifying category-aligned components related to the Arditi-style difference-of-means direction that play distinct functional roles in refusal register.",
+    "head": "Gemma-2-2B-IT",
+    "relation": "EVALUATED_ON",
+    "tail": "B1",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "B1 обозначает направление активаций для вмешательства, а не задачу, датасет или бенчмарк, на котором оценена модель."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.20071v1",
+    "abstract": "Large language models (LLMs) in multi-turn information systems accumulate their own earlier replies and a growing task state. We asked whether this conversation history lowers accuracy, and whether process-level quality metrics warn before it does. Each analysis was fixed before its outcomes were computed. In Study 1, on 48 sharded math tasks, retaining its replies lowered final success by 0.21 for GPT-4o-mini and 0.29 for Mistral-7B (Holm-adjusted p = 0.026 and 0.004); Llama-4 Scout showed the same direction, not significant. Study 2 introduces CDR-Stream, 100-turn state-tracking dialogues with an exact answer per turn and per-model difficulty calibration. With the full history, accuracy fell from about 0.6 to 0.1 within twenty turns at matched difficulty, whereas a solver-verified state summary kept it 0.52-0.59 higher (Holm-adjusted p less than 0.001). Consistency and logical coherence fell far less than accuracy, and stability rose. None of these metrics, a paired readiness measure or calibrated single-stream drift detectors gave robust, model-general early warning, although in Study 2 the repeat-based metrics were complete only for GPT-4o-mini. In the monitors we tested, a single 100-turn stream had power only for very large drops. Systems built on LLMs should keep task state outside the transcript and monitor across sessions.",
+    "head": "LLMs",
+    "relation": "IMPROVES",
+    "tail": "accuracy",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Изучено падение точности при сохранении истории и преимущество проверенного резюме состояния; общее утверждение LLMs improves accuracy не подтверждено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.19094v1",
+    "abstract": "Cuneiform recorded typologically unrelated languages for more than three millennia, raising a natural question: which of its statistical regularities are properties of the shared writing system, and which belong to individual languages? We answer this with two probe pairs targeting the same script-versus-language decomposition. The first compares two unsupervised, dictionary-free segmentation methods: transitional probability (TP), grounded in infant statistical-learning research, and Morfessor. To our knowledge, this is the first systematic evaluation of dictionary-free segmentation on cuneiform; the only prior published baseline relies on a hand-built dictionary (Max-Match, F1 = 0.74). Both our methods reach F1 > 0.97 within language (Morfessor reaches F1 > 0.99 on Akkadian and Sumerian), exceeding MaxMatch by more than 23 F1 points, but diverge sharply in cross-language transfer: TP holds F1 > 0.95 across all six language pairs, while Morfessor collapses to F1 = 0.27 from the 13K-token Elamite source. A learning curve and a Hittite stress test (34.7% foreign-script logograms, where TP drops 35 points and Morfessor only 8) further isolate the two underlying mechanisms. The second probe pair extends the same decomposition to representations: concatenating Unicode and Latin features improves classification in 11 of 12 morphosyntactic tasks (p < 0.01). We release CUNEI-TOOLS and a three-language benchmark.",
+    "head": "MORFESSOR",
+    "relation": "EXTENDS",
+    "tail": "TP",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Morfessor и TP сравниваются как два отдельных метода сегментации; Morfessor не назван расширением TP."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.18370v1",
+    "abstract": "Anomaly detection in tabular data poses significant challenges due to heterogeneous feature types-mixing numerical, categorical, and textual attributes, which complicate learning meaningful representations of normality. Recent work has applied large language models (LLMs) to this problem by serializing table rows as text sequences, yet these approaches rely on one-shot supervised fine-tuning that offers limited signal to tighten the model's description of normality. We propose DiSPaT, a self-play fine-tuning framework that strengthens the model's understanding of normal data. Building on the theoretical foundation of f-divergence minimization, we derive a tight approximation connecting our training objective to reducing the distributional gap between real normal data and model-generated samples. DiSPaT operates through an alternating optimization: at each iteration, the current policy generates synthetic samples that serve as pseudo-anomalies, while a critic discriminator learns to distinguish these from real normal samples; this signal drives policy updates that progressively align the model distribution with the true normal-data distribution. Extensive experiments on diverse benchmarks demonstrate that DiSPaT consistently outperforms prior LLM-based methods, deep learning approaches, and classical unsupervised detectors for tabular anomaly detection.",
+    "head": "DiSPaT",
+    "relation": "IMPROVES",
+    "tail": "LLMs",
+    "expected": "U",
+    "annotator": "AI assistant",
+    "annotation_note": "DiSPaT улучшает обучение и результаты для tabular anomaly detection, но хвост LLMs не уточняет модель, свойство и задачу. Без правила о допустимости такого обобщения утверждение неоднозначно."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.25818v1",
+    "abstract": "Pipelines that let a large language model (LLM) make discrete decisions need to know which decisions they may act on unattended, and a record that explains each one. We study a small, fully specified reconciliation contract: commit the target model's greedy answer (the anchor), draw one or two greedy checks that reach the answer by a different route (an alternate prompt, or a model from another family), and let a pure function return one of five outcomes, of which only Agree is acted on. On 48,000 model-item evaluations over 6,000 questions, with every method given access to verbalized confidence as a tie-breaker, the main finding concerns where calls come from: pooling another family's samples raises semantic entropy's AUROC by 1.7 to 4.0 points at every budget, and a same-model temperature check is the weakest design. As complete pipelines, the point estimates of the three-call contract and pooled semantic entropy over 3 or 5 samples differ by less than one point, with intervals containing zero. As detectors of the anchor's errors, the contract is ahead of pooled entropy with 3 and 5 samples under both tie-breaker conventions; with 10 samples the point estimates differ by less than one point and the sign depends on the convention. Under the strict Agree gate it automates 70% of items and still acts on 16% of errors. What the contract adds is a fixed committed answer, an explicit outcome and a decision replayable from its record; generation itself was not reproducible on the hosted API.",
+    "head": "CONTRACT",
+    "relation": "IMPROVES",
+    "tail": "SEMANTIC_ENTROPY",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Контракт сравнивают с semantic entropy как отдельный подход; даже преимущество в части сравнений не означает улучшение самого метода semantic entropy."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.23900v1",
+    "abstract": "Character-level OCR for low-resource Manchu often produces near-miss spelling errors. Lexicon-constrained decoding can correct such errors with lexical knowledge, but a fixed dictionary cannot cover the many unseen word forms produced by agglutinative word formation. We study whether morphological expansion alleviates this limitation, and how the expansion size and confidence fallback affect recognition. We segment the training transcriptions with a dictionary-based stem list, extract roots and suffix chains from them, generate about 510k candidates, select the expansion size through frequency ranking on the validation set, and decompose accuracy under hard lexicon constraints into the product of coverage and in-lexicon precision. Across three CRNN training seeds, adding 250k candidates to a base dictionary of about 29k words raises the type accuracy on unseen combinations of seen roots from 63.6% to 86.3%, and overall token accuracy from 82.4% to 84.2%. Adding all candidates lowers overall token accuracy to 81.5%, showing that the coverage gain comes with a loss of in-lexicon precision. A further comparison shows that the base dictionary with confidence fallback performs best overall among the CRNN systems tested, reaching 76.1% type and 85.5% token accuracy and outperforming the expanded lexicon both with and without fallback. A Transformer recognizer shows similar trends. These results indicate that morphological expansion relieves the constraint of a fixed dictionary, but a larger lexicon does not guarantee better recognition; in the present low-resource Manchu OCR setting, a selective combination of reliable lexical constraints and open recognition is more effective.",
+    "head": "LEXICON",
+    "relation": "EXTENDS",
+    "tail": "CRNN",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Словарь ограничивает декодирование OCR и расширяется кандидатами; расширение архитектуры CRNN словарем не заявлено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.18104v1",
+    "abstract": "The fingerprint by which a classifier recognizes the LLM behind a text is usually treated as a fixed property of the model. We show that it is contagious: a model that continues a conversation begun by another model inherits that model's fingerprint. This undermines audits of API relays, which can serve the first turns of a conversation with the model a customer pays for and silently hand the rest to a cheaper one. After such a handoff, detection of the substitute by a text classifier drops from 0.97 to 0.72 (DeepSeek replacing Claude Sonnet) and from 0.87 to 0.54 for a same-vendor downgrade (Haiku), and retraining on handoff data repairs only substitutes seen in training. Preregistered experiments trace the contagion to imitation of the history's style. History also moves a model away from its own fingerprint: active probes are not camouflaged, but when calibrated on fresh conversations they flag \\emph{honest} models on long contexts at rates up to 1.00, and a standard MMD equality test rejects all nine models we test. Both failures come from comparing a history-dependent reply with a history-free reference. We propose \\textsc{Lineup}, which samples references from the claimed model \\emph{on the same history} and tests the audited reply by its rank among them. \\textsc{Lineup} controls false positives by exchangeability and needs no fitted threshold or log-probabilities. With contemporaneous references on two closed models, its false-positive rate is 0.056 (preregistered bound 0.10), and it detects 0.81 of substitute sessions across six pairs after four audited turns.",
+    "head": "Lineup",
+    "relation": "EXTENDS",
+    "tail": "classifier",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Lineup представлен как проверка по рангу с сопоставимой историей; расширением ранее обсуждаемого классификатора он не назван."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.24651v1",
+    "abstract": "We present Piccolo, a family of multimodal decision models (0.8B to 27B) that coevolves model capabilities and training data via Agentic Data Engineering and recursive self-improvement (RSI). The models predict probabilities over candidate answers for general-purpose text and visual judgments, agent harnesses, data workflows, and interactive games. Piccolo-27B tops the Decision Index Vision Full leaderboard with a score of 75.59, while Piccolo-9B and Piccolo-4B achieve 68.35 and 67.46, respectively. All three rank first on the Private benchmark in their respective model-size categories. Research agents analyze model behavior, construct training data, conduct experiments, and use the results to refine subsequent proposals. Semantic slices and a shared research memory connect these actions across the model family's development. With training recipes comprising hundreds of thousands of examples, data selection and feedback-driven refinement are central to the self-improvement process. Our large-scale RSI exploration yields three counter-intuitive insights for decision-model development: (1) Backbone-recipe co-adaptation outweighs raw model recency: earlier backbones can surpass newer generations on visual tasks under identical recipes; (2) Targeted data curation enables 4B-9B models to rival 27B baselines on specialized workflows; and (3) Continuous loss reduction can decouple from and even degrade discrete decision accuracy. Together with the released weights and tools from the Data-Juicer and AgentScope ecosystems, Piccolo provides an actionable blueprint for building frontier decision models and scaling data-driven RSI.",
+    "head": "Piccolo",
+    "relation": "IMPROVES",
+    "tail": "Private",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Piccolo занимает первые места на Private benchmark; высокий результат на бенчмарке не означает улучшение самого бенчмарка."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.22120v1",
+    "abstract": "In mixture-of-experts (MoE) language models, a token is routed to a sequence of experts across layers. We investigate how forcing tokens onto chosen expert paths influences model behavior. We build a target path from the experts that a concept's or role's tokens most often use, and we add a fixed bias to each target expert's router logit during generation to steer the token toward this expert path. We study two kinds of targets. Format targets concern the form of the output, and concept targets concern its topic. In Qwen3-30B-A3B, we show that steering a format path changes the text the model writes. We also show that steering a concept path shifts the model's next-token probabilities toward the concept, even when the path is built in another language, yet this shift has little effect on the generated text. We investigate why formats reach the text but concepts do not by steering only part of the generation, and find evidence that a format, once started, reinforces itself. We show that the concepts religion and money steer most strongly, and that the effect is concentrated in the middle layers. We attempt to explain why the strength of the effect varies by concept through an analysis of embedding distinctiveness and word frequency.",
+    "head": "MOE",
+    "relation": "USES",
+    "tail": "TOKEN",
+    "expected": "U",
+    "annotator": "AI assistant",
+    "annotation_note": "Маршрутизация токенов через экспертов прямо описана, но MOE USES TOKEN слишком неопределенно: не установлено, охватывает ли USES обработку входных единиц или только применение методов и ресурсов."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.17481v1",
+    "abstract": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match the target activations obtained by adding a steering vector to the residual stream. We further introduce universal suffixes trained across many prompts at once, a model-translation step that rewrites the suffix into human-readable text midway through optimisation, and a soft-suffix variant to remove the discrete token space constraint. We study two behaviours: steering a model to answer in German, and anti-refusal steering for jailbreaking. For German, a discrete suffix reproduces the steering vector's behaviour almost perfectly and transfers well across prompts and models. For anti-refusal, the equivalence is weaker, succeeding under a phrase-avoidance metric but only partially under the stricter HarmBench classifier. Our results show that a steering vector's behaviour is reachable from the input, with no access to model internals at generation time, up to a loss that depends on the concept being steered.",
+    "head": "UNIVERSAL_SUFFIXES",
+    "relation": "IMPROVES",
+    "tail": "SUFFIX",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Universal suffixes обучают на многих промптах; отдельное утверждение об улучшении SUFFIX как объекта не подтверждено."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.17481v1",
+    "abstract": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match the target activations obtained by adding a steering vector to the residual stream. We further introduce universal suffixes trained across many prompts at once, a model-translation step that rewrites the suffix into human-readable text midway through optimisation, and a soft-suffix variant to remove the discrete token space constraint. We study two behaviours: steering a model to answer in German, and anti-refusal steering for jailbreaking. For German, a discrete suffix reproduces the steering vector's behaviour almost perfectly and transfers well across prompts and models. For anti-refusal, the equivalence is weaker, succeeding under a phrase-avoidance metric but only partially under the stricter HarmBench classifier. Our results show that a steering vector's behaviour is reachable from the input, with no access to model internals at generation time, up to a loss that depends on the concept being steered.",
+    "head": "ActGCG",
+    "relation": "IMPROVES",
+    "tail": "steering vector",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "ActGCG воспроизводит эффект steering vector через входной суффикс, а не улучшает сам steering vector."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.18284v1",
+    "abstract": "A small language model that turns a typed order into structure can fail in two ways. It can print something broken, which any system rejects. Or it can print a clean, well formed order that nobody placed. Our companion work calls the second kind a silent error, and it is the dangerous one. We present a web demo in which a fine-tuned 0.8B parameter model runs entirely inside the visitor's browser tab, through llama.cpp compiled to WebAssembly. No order text leaves the device. The page parses orders as the visitor types, scores every ticket with the PIZZA benchmark's own matcher ported to TypeScript, refuses anything off the menu with \"?\" so the model can face the open web, and lets visitors hunt for silent errors or try to cause one. Run in the browser on all 1,357 PIZZA test orders, the deployed model writes the same output as the server evaluation for 99.0% of them and reaches the same exact match (0.882); we also report its latency on 3 consumer laptops. Demo: https://wrong.cuyor.com",
+    "head": "language model",
+    "relation": "EVALUATED_ON",
+    "tail": "PIZZA benchmark",
+    "expected": "A",
+    "annotator": "AI assistant",
+    "annotation_note": "Модель проверена на всех 1357 тестовых заказах PIZZA с использованием matcher этого бенчмарка."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.20003v1",
+    "abstract": "In 2025 alone, 48 new large language model (LLM) architectures were added to the Hugging Face transformers library, and many of them arrive with a technical report that presents the model as new. What is actually new in these models, and is it tested? We put this question to LLM technical reports. We look at three things: what the reference code shows about how new open-weight architectures differ from earlier ones; what 40 randomly sampled technical reports claim as new and whether they support it with ablation studies; and what they disclose for reproducibility and transparency. In the library, 39 of the 48 architectures added in 2025 take at least two of their three core blocks from another model, most often Llama, although part of this reflects how the library writes code. In the reports, 19 of 73 architectural or training novelty claims come with a controlled with/without comparison; 4 of 40 reports state more than one training run; 8 rerun the models they compare against under one setup; and 1 discloses data mixture, token count, and compute together. We also looked for known components given new names: none of five candidate cases hid its origin, though we did not study model names. We propose seven reporting rules for LLM release reports and apply them to two reports. We do not judge model quality, and an untested claim may still be true.",
+    "head": "TECHNICAL_REPORT",
+    "relation": "EVALUATED_ON",
+    "tail": "ABLACTION_STUDIES",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "Авторы проверяют наличие ablation studies в отчетах и поддержку отдельных claims; исследования не являются бенчмарком для TECHNICAL_REPORT. В названии сущности также есть опечатка."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.20145v1",
+    "abstract": "UI grounding asks a model to find the screen element that a user instruction refers to. Most current systems use a vision-language model (VLM) that reads a screenshot and outputs pixel coordinates. We study this task on Urdu mobile web pages, a setting with no published UI grounding results. Instead of regressing coordinates, we take the candidate elements from the page DOM and train a 279M-parameter cross-encoder (mDeBERTa-v3-base) to pick one. The click point is the centre of the picked element's box, so it is exact whenever the right element is picked. We built a frozen test set of 304 instructions from six Urdu news sites; 149 of them (49%) are referential and never quote the full target text. Test domains were banned from training data before collection started. The ranker scores 73.4% point-in-box accuracy, against 29.6% for UI-TARS-2B and 23.7% for Qwen2.5-VL-7B, both zero-shot. On the referential slice the ranker scores 65.8%, against 30.2% for a string-matching baseline that needs no training. In a controlled comparison at small scale, with training data drawn from the same pages, a coordinate-regression model of similar size scores 1.6%. Adding element geometry as input tokens gives the best variant, at 75.7%. The ranker's errors concentrate in two places: elements that share identical text, and ordinal instructions such as \"the fourth link\".",
+    "head": "mDeBERTa-v3-base",
+    "relation": "IMPROVES",
+    "tail": "UI grounding",
+    "expected": "A",
+    "annotator": "AI assistant",
+    "annotation_note": "В рамках описанной задачи Urdu UI grounding обученный ranker на mDeBERTa-v3-base превосходит указанные baseline-системы. Метка не утверждает превосходство необученного backbone или улучшение для любых UI."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.23155v1",
+    "abstract": "Recent advances in text-to-image generation have substantially improved image quality, particularly through diffusion-based methods that require multiple inference steps. In contrast, Sphere Encoder offers an efficient generative framework capable of producing images with fewer forward steps. However, extending it to free-form text is nontrivial, because its class-conditioned design lacks cross-modal alignment. To address this challenge, we propose TextSphere, an efficient text-to-image generative framework that extends Sphere Encoder with language conditioning and cross-modal alignment. We incorporate pretrained CLIP text embeddings through adaptive layer normalization (AdaLN) to guide image generation while retaining the original spherical sampling mechanism. To bridge the cross-modal representation gap, we introduce a Spherical Semantic Alignment and Uniformity (SSAU) objective that jointly promotes semantic alignment and representation uniformity on the hypersphere. Experiments on CUB-200-2011, MS-COCO-2014, and Flickr30k demonstrate that TextSphere consistently reduces generation FID (gFID) over the text-conditioned baseline while achieving reconstruction FID (rFID) below 1.0. With only 4 and 6 sampling steps, TextSphere achieves lower gFID than the compared diffusion- and GAN-based models trained from scratch on CUB-200-2011 and MS-COCO-2014, respectively. We further observe that improved reconstruction fidelity does not necessarily yield better generation quality. In addition, we use Partial Least Squares Singular Value Decomposition (PLS-SVD) to analyze cross-modal alignment and modality gap, offering insight into the effectiveness of our approach.",
+    "head": "AdaLN",
+    "relation": "IMPROVES",
+    "tail": "TextSphere",
+    "expected": "B",
+    "annotator": "AI assistant",
+    "annotation_note": "AdaLN используется для подачи CLIP embeddings в TextSphere; отдельное улучшение от AdaLN не показано и не заявлено. Использование компонента само по себе недостаточно для IMPROVES."
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2611.24844v1",
+    "abstract": "Language models acquire their capabilities from training data, and developers withhold data during training to keep models from learning capabilities that could be misused. How long this delays a capability, and how much data is needed to acquire it later, is unknown. Here we show that the general progress a model makes on the rest of its training data substitutes for the data that was withheld. We withheld the training signal for individual skills in models of chess, Othello, molecular strings, bracket languages and web text. The delay of a withheld skill in larger models was predicted from smaller ones. A chess model never explicitly trained to respond to check ranked the legal responses almost as well as a model that was. When models were then trained on the withheld data, they acquired the skill with a small fraction of the data needed from initialization, and this fraction decreased as the models progressed. A control rule of equal difficulty was learned much more slowly. A programming language withheld from the training text of a 7-billion-parameter model was regained in the same way. Data filtering therefore delays a capability, and the data required to regain it decreases as models improve.",
+    "head": "LARGER_MODELS",
+    "relation": "RELATED_TO",
+    "tail": "WITHHELD_DATA",
+    "expected": "A",
+    "annotator": "AI assistant",
+    "annotation_note": "Абстракт непосредственно связывает размер и прогресс моделей с задержкой и последующим освоением навыков при withholding training data; широкая связь RELATED_TO поддержана."
+  }
+]
